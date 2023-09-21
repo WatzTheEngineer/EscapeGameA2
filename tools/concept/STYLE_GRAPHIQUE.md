@@ -1,5 +1,5 @@
-|              |         **D**         |                         **R**                        |                **PA**               |             **LP**             |
-|:------------:|:---------------------:|:----------------------------------------------------:|:-----------------------------------:|:------------------------------:|
-|     **+**    | Atypique Rendu Beauté |                Rendu Beauté Immersion                | Atypique Rendu Liberté Optimisation |   Temps Facilité Optimisation  |
-|     **-**    |    Complexité Temps   | Optimisation Complexité Temps Environnement complexe |           Complexité Temps          | Tech Dépassée Beauté Immersion |
-| **Exemples** |      Prof. Layton     | FPS Modernes Tomb Raider Jeux de course RPG Bethesda | Octopath Traveller 2D Side Scroller |            Fortnite            |
+|              |            **D**            |                             **R**                             |                    **PA**                    |                **LP**                |
+|:------------:|:---------------------------:|:-------------------------------------------------------------:|:--------------------------------------------:|:------------------------------------:|
+|     **+**    | Atypique<br>Rendu<br>Beauté |                  Rendu<br>Beauté<br>Immersion                 | Atypique<br>Rendu<br>Liberté<br>Optimisation |   Temps<br>Facilité<br>Optimisation  |
+|     **-**    |     Complexité<br>Temps     | Optimisation<br>Complexité<br>Temps<br>Environnement complexe |              Complexité<br>Temps             | Tech Dépassée<br>Beauté<br>Immersion |
+| **Exemples** |         Prof. Layton        | FPS Modernes<br>Tomb Raider<br>Jeux de course<br>RPG Bethesda |    Octopath Traveller<br>2D Side Scroller    |               Fortnite               |
