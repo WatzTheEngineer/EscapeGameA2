@@ -1,0 +1,3 @@
+# Trame du jeu
+
+> Vous vous êtes inscrits pour faire partie d'une unité d'élite d'informaticiens: (insérer un nom), sur le point d'embarquer pour la lune de Jupiter Io. Ce corps international recrute sur la base d'un nouveau test interractif vous faisant prendre part à l'histoire de l'informatique. Saurez-vous décrocher votre place en reproduisant les faits et gestes des grands génies de ce domaine ? Bonne chance à vous le nouveau ! On compte sur vous !
