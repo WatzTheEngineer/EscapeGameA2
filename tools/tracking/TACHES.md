@@ -5,6 +5,7 @@
     > Travaille sur le tableau 7
 - Louis
     > Organise le dépôt gitHub
+    >
     > Aide Logan et Thomas sur leurs tableaux
 - Thomas
     > Travaille sur le tableau 5
