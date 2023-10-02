@@ -5,7 +5,7 @@
     1. Lancement de google (~1998)
     2. Lancement STARLINK (~2018)
     3. Bug de l'an 2038  (~2032)
-    4. Windows VS Microsoft - Windows (~1985)
+    4. Apple VS Microsoft - Windows (~1985)
     5. La course poursuite de Mitnick (~1988)
     6. Premier algorithme informatique (1843)
     7. ELIZA et le test de Turing (~1996)
