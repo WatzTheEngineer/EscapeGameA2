@@ -11,3 +11,9 @@
     > Travaille sur le tableau 5
 - Willem
     > Travaille sur la trame et le MIRO
+
+## 02/10/2023
+- Logan
+    > Travaille sur le tableau 7
+- Louis
+    > Travaille sur le tableau 5
