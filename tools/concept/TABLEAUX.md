@@ -6,11 +6,22 @@ Vous incarnez Kevin Mitnick un célèbre hacker américain, connu pour ses activ
 Le joueur doit résoudre les énigmes permettant le piratage d'un logiciel privé tout en échappant à ses poursuivants.
 ### Enigmes
 - Charger l'ordinateur
+    - entrer dans le batiment:
+        - serrure ( crochetage )
+        - porte de derrière mal fermée = passer au travers du grillage trpouer( bouger des caisse )
+    - trouver un moyen de rétablir le courant 
+        - redémarrer le disjoncteur
 - Reprendre le controle des lignes de communication
+    - rrecherche du routeur ( local technique derriere l'accueil ATTENTION si le joueur renttre par derriere il débloque automaitquement le routeur )
+    - recherche du cable pour ce connecter au routeur( en voler un sur un ordinateur du cyber café ) 
 - Le Logiciel
     - Récupérer les accès
-    - Récupérer le code
+        - trouver les codes d'accès (dans le bureau du technicien dans le local technique )
+        - Brancher un répéteur sur le boitier 
+    - Récupérer le code du logiciel 
+        - réecrire le code du logiciel sur un 'Compact Disc' 
     - Capibaras
+        - Lancer l'impression d'une photo de capibara et écrire FBI sur chaque feuille imprimer puis les mettres sur chaque pc du cybercafé (imprimante disponible dans la    pièce communne)
 - Effacer les traces (optionel)
 - S'en aller
 ## Tableau 7 - ELIZA et le test de Turing
