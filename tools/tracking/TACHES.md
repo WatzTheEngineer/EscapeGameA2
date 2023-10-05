@@ -23,6 +23,8 @@
     > Travaille sur le tableau 7
 - Louis
     > Travaille sur le tableau 5
+    >
+    > Travaille sur la présentation des technologies disponibles
 - Thomas
     > Travaille sur le tableau 5
 - Willem
