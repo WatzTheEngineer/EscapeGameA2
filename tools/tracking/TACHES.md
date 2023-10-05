@@ -17,3 +17,13 @@
     > Travaille sur le tableau 7
 - Louis
     > Travaille sur le tableau 5
+
+## 05/10/2023
+- Logan
+    > Travaille sur le tableau 7
+- Louis
+    > Travaille sur le tableau 5
+- Thomas
+    > Travaille sur le tableau 5
+- Willem
+    > Travaille sur le tableau 7
