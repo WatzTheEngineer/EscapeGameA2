@@ -1,5 +1,5 @@
 # Tableaux de jeu
-## Tableau 4 - La course poursuite de Mitnick
+## Tableau 4 - Microsoft VS Apple
 ### Contexte
 Vous incarnez Bill Gates s'infiltrant dans les open spaces de chez Apple une fois la nuit tombée, son objectif, voler des informations importantes de l'entreprise et les transmettre à IBM afin de voir un jour son idée émerger, Windows.
 ### Trame
