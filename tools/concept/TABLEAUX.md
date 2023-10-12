@@ -1,12 +1,22 @@
 # Tableaux de jeu
-## Tableau 4 - Microsoft VS Apple
-### Contexte
-Vous incarnez Bill Gates s'infiltrant dans les open spaces de chez Apple une fois la nuit tombée, son objectif, voler des informations importantes de l'entreprise et les transmettre à IBM afin de voir un jour son idée émerger, Windows.
+## Tableau 4 - Apple VS Microsoft 
+### Contexte 
+Vous incarnez Bill Gates en 1985, votre objectif et donc de finaliser votre plan pour lancer Windows avec IBM. Pour rappel vous êtes entrain de programmer la sortie de Windows dans le dos d'Apple avec IBM, pour aller les concurencer sur leur marché. Vous êtes le ../../1985 le soir dans les bureaux d'Apple, vous avez êtes à présent seul dans l'open space des bureaux d'Apple mais des agents de sécurité montent la garde.
 ### Trame
-Le joueur se trouve donc dans l'open space ou plusieurs pc se trouve (environ 3), sur chaque pc le joueur devra résoudre des énigmes différentes. Mais attention, un part feu et un agent de sécurité sont là pour assurer la sécurité des données, le joueur devra donc réaliser le vol de donnée sans se faire attraper !
-### Enigmes
-
-# Tableaux de jeu
+Le Joueur doit finir de fournir les dernières données d'Apple à IBM sans se faire attraper par les agents de sécurité ou la sécurité des ordinateurs. Il y a 6 ordinateurs dans cette section de l'open space. Le Joueur devra donc entrer dans les PCs pour y extraire les informations. Pour entrer dans les PCs le joueur devra résoudre une énigme. Cependant un agent de sécurité fera des rondes réguliérement.
+ ### Enigmes
+- PC1
+  - Enigmes 1 :
+- PC2
+  - Enigmes 2 :
+- PC3
+  - Enigmes 3 :
+- PC4
+  - Enigmes 4 :
+- PC5
+  - Enigmes 5 :
+- PC6
+  - Enigmes 6 :
 ## Tableau 5 - La course poursuite de Mitnick
 ### Contexte
 Vous incarnez Kevin Mitnick un célèbre hacker américain, connu pour ses activités de piratage informatique dans les années 1980 et 1990. Il a acquis une notoriété en piratant les systèmes informatiques de grandes entreprises, notamment DEC et Nokia, ainsi que des organisations gouvernementales comme le FBI et le Pentagone.
