@@ -1,4 +1,12 @@
 # Tableaux de jeu
+## Tableau 4 - La course poursuite de Mitnick
+### Contexte
+Vous incarnez Bill Gates s'infiltrant dans les open spaces de chez Apple une fois la nuit tombée, son objectif, voler des informations importantes de l'entreprise et les transmettre à IBM afin de voir un jour son idée émerger, Windows.
+### Trame
+Le joueur se trouve donc dans l'open space ou plusieurs pc se trouve (environ 3), sur chaque pc le joueur devra résoudre des énigmes différentes. Mais attention, un part feu et un agent de sécurité sont là pour assurer la sécurité des données, le joueur devra donc réaliser le vol de donnée sans se faire attraper !
+### Enigmes
+
+# Tableaux de jeu
 ## Tableau 5 - La course poursuite de Mitnick
 ### Contexte
 Vous incarnez Kevin Mitnick un célèbre hacker américain, connu pour ses activités de piratage informatique dans les années 1980 et 1990. Il a acquis une notoriété en piratant les systèmes informatiques de grandes entreprises, notamment DEC et Nokia, ainsi que des organisations gouvernementales comme le FBI et le Pentagone.
