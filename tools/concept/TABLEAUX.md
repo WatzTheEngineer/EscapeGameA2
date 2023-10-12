@@ -12,7 +12,7 @@ Le joueur doit résoudre les énigmes permettant le piratage d'un logiciel priv�
     - trouver un moyen de rétablir le courant 
         - redémarrer le disjoncteur
 - Reprendre le controle des lignes de communication
-    - rrecherche du routeur ( local technique derriere l'accueil ATTENTION si le joueur renttre par derriere il débloque automaitquement le routeur )
+    - recherche du routeur ( local technique derriere l'accueil ATTENTION si le joueur renttre par derriere il débloque automaitquement le routeur )
     - recherche du cable pour ce connecter au routeur( en voler un sur un ordinateur du cyber café ) 
 - Le Logiciel
     - Récupérer les accès
@@ -23,7 +23,9 @@ Le joueur doit résoudre les énigmes permettant le piratage d'un logiciel priv�
     - Capibaras
         - Lancer l'impression d'une photo de capibara et écrire FBI sur chaque feuille imprimer puis les mettres sur chaque pc du cybercafé (imprimante disponible dans la    pièce communne)
 - Effacer les traces (optionel)
+    - Se rebrancher sur le routeur puis le hard reset 
 - S'en aller
+    - Aller dans le camion
 ## Tableau 7 - ELIZA et le test de Turing
 ### Contexte
 Vous êtes l'assistant de Joseph Weizenbaum (doublé avec un accent Allemand) informaticien qui est en train de supporter la de programmation ELIZA, l'un des premiers programmes informatique de dialogue qui simule une conversion humaine (dans ce cas une conversation avec un psychothérapeute rogérien). Joseph s'absente et l'assistant a pour objectif de finaliser sa conception et de lui faire passer le test de Turing.
