@@ -5,18 +5,17 @@ Vous incarnez Bill Gates en 1985, votre objectif et donc de finaliser votre plan
 ### Trame
 Le Joueur doit finir de fournir les dernières données d'Apple à IBM sans se faire attraper par les agents de sécurité ou la sécurité des ordinateurs. Il y a 6 ordinateurs dans cette section de l'open space. Le Joueur devra donc entrer dans les PCs pour y extraire les informations. Pour entrer dans les PCs le joueur devra résoudre une énigme. Cependant un agent de sécurité fera des rondes réguliérement.
  ### Enigmes
-- PC1
-  - Enigmes 1 :
+ But : Réussir à trouver les accès du PC du DSI pour récuperer des données sensible, pour cela il faut dévérouiller le PC d'un proche du DSI afin d'y parvenir il faut trouver les accès des autres PC de la salle commune afin de trouver les discutions entre collègues pour découvrir les différents indice sur les identifiants du proche.
+- PC1 
+  - Identifiant : Post-it
 - PC2
-  - Enigmes 2 :
+  - Identifiant : tirroir du bureau = notes
 - PC3
-  - Enigmes 3 :
+  - Identifiant : cadre photo = nom du chien a trouver dans une discution
 - PC4
-  - Enigmes 4 :
-- PC5
-  - Enigmes 5 :
-- PC6
-  - Enigmes 6 :
+  - Identifiant :déduis des indices trouver dans les autres PC
+- PC DSI
+  - Enigme : Brancher AmogUs (oui y a pas le N)
 ## Tableau 5 - La course poursuite de Mitnick
 ### Contexte
 Vous incarnez Kevin Mitnick un célèbre hacker américain, connu pour ses activités de piratage informatique dans les années 1980 et 1990. Il a acquis une notoriété en piratant les systèmes informatiques de grandes entreprises, notamment DEC et Nokia, ainsi que des organisations gouvernementales comme le FBI et le Pentagone.
