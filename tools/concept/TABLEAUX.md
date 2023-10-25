@@ -1,12 +1,21 @@
 # Tableaux de jeu
-## Tableau 4 - Microsoft VS Apple
-### Contexte
-Vous incarnez Bill Gates s'infiltrant dans les open spaces de chez Apple une fois la nuit tombée, son objectif, voler des informations importantes de l'entreprise et les transmettre à IBM afin de voir un jour son idée émerger, Windows.
+## Tableau 4 - Apple VS Microsoft 
+### Contexte 
+Vous incarnez Bill Gates en 1985, votre objectif et donc de finaliser votre plan pour lancer Windows avec IBM. Pour rappel vous êtes entrain de programmer la sortie de Windows dans le dos d'Apple avec IBM, pour aller les concurencer sur leur marché. Vous êtes le ../../1985 le soir dans les bureaux d'Apple, vous avez êtes à présent seul dans l'open space des bureaux d'Apple mais des agents de sécurité montent la garde.
 ### Trame
-Le joueur se trouve donc dans l'open space ou plusieurs pc se trouve (environ 3), sur chaque pc le joueur devra résoudre des énigmes différentes. Mais attention, un part feu et un agent de sécurité sont là pour assurer la sécurité des données, le joueur devra donc réaliser le vol de donnée sans se faire attraper !
-### Enigmes
-
-# Tableaux de jeu
+Le Joueur doit finir de fournir les dernières données d'Apple à IBM sans se faire attraper par les agents de sécurité ou la sécurité des ordinateurs. Il y a 6 ordinateurs dans cette section de l'open space. Le Joueur devra donc entrer dans les PCs pour y extraire les informations. Pour entrer dans les PCs le joueur devra résoudre une énigme. Cependant un agent de sécurité fera des rondes réguliérement.
+ ### Enigmes
+ But : Réussir à trouver les accès du PC du DSI pour récuperer des données sensible, pour cela il faut dévérouiller le PC d'un proche du DSI afin d'y parvenir il faut trouver les accès des autres PC de la salle commune afin de trouver les discutions entre collègues pour découvrir les différents indice sur les identifiants du proche.
+- PC1 
+  - Identifiant : Post-it
+- PC2
+  - Identifiant : tirroir du bureau = notes
+- PC3
+  - Identifiant : cadre photo = nom du chien a trouver dans une discution
+- PC4
+  - Identifiant :déduis des indices trouver dans les autres PC
+- PC DSI
+  - Enigme : Brancher AmogUs (oui y a pas le N)
 ## Tableau 5 - La course poursuite de Mitnick
 ### Contexte
 Vous incarnez Kevin Mitnick un célèbre hacker américain, connu pour ses activités de piratage informatique dans les années 1980 et 1990. Il a acquis une notoriété en piratant les systèmes informatiques de grandes entreprises, notamment DEC et Nokia, ainsi que des organisations gouvernementales comme le FBI et le Pentagone.
