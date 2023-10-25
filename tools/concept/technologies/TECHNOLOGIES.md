@@ -9,7 +9,7 @@
     >   - Documentation
     >   - Performances
     >   - Portabilité (JVM)
-    >   - Code Only
+    >   - Code seulement
     >   - Difficile d'utilisation
     > ### Commentaire :
     >   * La technologie n'est pas retenue car la documentation est trop restreinte pour garantir un bon départ sur celle-ci.
@@ -22,12 +22,12 @@
     >   * Typescript
     > ### Points positifs
     >   + Portabilité
-    >   + Facilité d'import des modèles
+    >   + Facilité d'importation des modèles
     > ### Points négatifs
     >   - Performances
     >   - Rendu limité
     >   - Hébergement
-    >   - Pas de garde-fou pour l'utilisateur (Rechargement de page)
+    >   - Pas de garde-fou pour l'utilisateur (rechargement de page)
     > ### Commentaire :
     >   * La technologie n'est pas retenue car le risque d'apparition de problèmes de performances est trop élevé.
 
@@ -38,10 +38,10 @@
     >   + Rendu
     >   + Performances (Jeu)
     >   + Documentation
-    >   + Assets disponibles
+    >   + Ressources disponibles
     >   + Compatibilité
     >   + Portabilité
-    >   + Versionning facile
+    >   + Gestion de version facile
     >   + Développement assisté et rapide
     > ### Points négatifs
     >   - Prise en main
