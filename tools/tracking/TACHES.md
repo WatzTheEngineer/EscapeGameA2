@@ -40,3 +40,17 @@
     > Travaille sur le tableau 5
 - Willem
     > Travaille sur les tableau 4 et 7
+
+## 25/10/2023
+- Logan
+    > Se forme à l'utilisation de Unity
+    > Setup Rider
+- Louis
+    > Forme son groupe à l'utilisation des matériaux sous Unity
+    > Arrange le dépôt GitHub
+- Thomas
+    > Setup Unity et Rider
+    > Se forme à l'utilisation de Unity
+- Willem
+    > Setup Unity et Rider
+    > Se forme à l'utilisation de Unity
