@@ -1,4 +1,4 @@
-|              |            **D**            |                             **R**                             |                    **PA**                    |                **LP**                |
+|              |            **Dessin**            |                             **Réaliste**                             |                    **Pixel Art**                    |                **Low Poly**                |
 |:------------:|:---------------------------:|:-------------------------------------------------------------:|:--------------------------------------------:|:------------------------------------:|
 |     **+**    | Atypique<br>Rendu<br>Beauté |                  Rendu<br>Beauté<br>Immersion                 | Atypique<br>Rendu<br>Liberté<br>Optimisation |   Temps<br>Facilité<br>Optimisation  |
 |     **-**    |     Complexité<br>Temps     | Optimisation<br>Complexité<br>Temps<br>Environnement complexe |              Complexité<br>Temps             | Tech Dépassée<br>Beauté<br>Immersion |

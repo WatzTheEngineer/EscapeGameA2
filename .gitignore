@@ -1,0 +1,8 @@
+# Exclure les répertoires intermédiaires et sauvegardés d'UE5
+/tools/concept/technologies/UE5/Intermediate/
+/tools/concept/technologies/UE5/Saved/
+
+# Exclure les répertoires et fichiers de bibliothèque Unity2020
+/tools/concept/technologies/Unity2020/Library/
+/tools/concept/technologies/Unity2020/UserSettings/
+/tools/concept/technologies/Unity2020/Logs/
