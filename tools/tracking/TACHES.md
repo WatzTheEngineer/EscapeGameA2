@@ -54,3 +54,14 @@
 - Willem
     > Setup Unity et Rider
     > Se forme à l'utilisation de Unity
+
+## 08/11/2023
+- Logan
+    > Travaille sur la création d'un menu principal sur Unity
+    > Travaille sur la sélection de langue sur Unity
+- Louis
+    > Travaille sur la création d'une scène test sur Blender, Substance et Unity
+- Thomas
+    > Travaille sur la création d'une scène test sur Blender, Substance et Unity
+- Willem
+    > Réalise le tableau comparatif complet des technologies pour justifier l'emploi d'Unity
