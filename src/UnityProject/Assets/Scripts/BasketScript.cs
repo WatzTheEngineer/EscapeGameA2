@@ -28,7 +28,8 @@ public class BasketScript : MonoBehaviour
         {
             Debug.Log("Test");
             SceneManager.LoadScene("Menu");
-          
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             
         }
     }
