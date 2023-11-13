@@ -79,3 +79,4 @@ src/UnityProject/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 # Temporary auto-generated Android Assets
 src/UnityProject/[Aa]ssets/[Ss]treamingAssets/aa.meta
 src/UnityProject/[Aa]ssets/[Ss]treamingAssets/aa/*
+src/UnityProject/.idea/
