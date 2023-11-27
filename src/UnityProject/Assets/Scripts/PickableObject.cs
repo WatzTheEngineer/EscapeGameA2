@@ -21,7 +21,7 @@ public class PickableObject : MonoBehaviour
     {
         float dist = Vector3.Distance(gameObject.transform.position, player.position);
 
-        if (dist > 1.9f) 
+        if (dist < 1.9f) 
         {
             hasPlayer = true;      
         }
