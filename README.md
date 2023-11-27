@@ -21,6 +21,24 @@ Le dépôt utilise les branches suivantes :
 - **tools/concept**: Branche pour les documents liés à la conception du jeu.
 - **tools/tracking**: Branche pour les documents de suivi de la répartition des tâches.
 
+## Commits
+
+Pour contribuer, les commits (hors merge) sur les branches tools/* doivent être en anglais et suivre la syntaxe :
+> {Mot clé} {fichier(s)/répertoire(s)}
+
+Pour contribuer, les commits (hors merge) sur la branche src/* doivent être en anglais et suivre la syntaxe :
+> {Mot clé} (message)
+
+Liste de mots clés
+> - Add
+> - Fix
+> - Remove
+> - Update
+> - Refactor
+> - Rename
+> - Move
+> - Improve (src/* seulement)
+
 ## Licence
 
 Ce projet est sous licence [GNU General Public License v3.0](./LICENSE).
