@@ -65,3 +65,17 @@
     > Travaille sur la création d'une scène test sur Blender, Substance et Unity
 - Willem
     > Réalise le tableau comparatif complet des technologies pour justifier l'emploi d'Unity
+
+---
+>   CETTE PERIODE CORRESPOND A LA PREPARTION DES SOUTENANCES
+---
+
+## 06/12/2023
+- Logan
+    > Travaille sur le gamedesign du tableau Mitnick
+- Louis
+    > Travaille sur la création d'assets, leur implémentation, et l'amélioration du shader et du post-processing
+- Thomas
+    > Travaille sur la création et l'amélioration de l'UI/UX
+- Willem
+    > Réalise le story mapping sur miro, travaille sur la gestion de l'inventaire du joueur
