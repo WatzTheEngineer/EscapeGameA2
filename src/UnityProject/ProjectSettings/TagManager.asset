@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Basket
   - FakeWall
+  - ObjetRamassable
+  - Pickable
   layers:
   - Default
   - TransparentFX

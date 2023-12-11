@@ -1,75 +1,79 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
 
-public class PickableObject : MonoBehaviour
-{
-    public Transform player;
-    public Transform playerCam;
-    public float throwForce = 10;
-    private bool hasPlayer = false;
-    private bool beingCarried = false;
-    private bool touched = false;
-    // Start is called before the first frame update
-    void Start()
+    public class PickableObject : MonoBehaviour
     {
-        
-    }
+        public Transform player;
+        public Transform playerCam;
+        public float throwForce = 10;
 
-    // Update is called once per frame
-    void Update()
-    {
-        float dist = Vector3.Distance(gameObject.transform.position, player.position);
+        private bool hasPlayer = false;
+        private bool beingCarried = false;
+        private bool touched = false;
 
-        if (dist < 1.9f) 
+        private Vector3 objectPos;
+        private float distance;
+
+        // Start is called before the first frame update
+        void Start()
         {
-            hasPlayer = true;      
-        }
-        else
-        {
-            hasPlayer = false;
-        }
-        
-        if (hasPlayer && Input.GetKey(KeyCode.E)) 
-        {
-            GetComponent<Rigidbody>().isKinematic = true;
-            transform.parent = playerCam;
-            beingCarried = true;
+            objectPos = transform.position;
         }
 
-        if (beingCarried)
+        // Update is called once per frame
+        void Update()
         {
-            if (touched) 
+            float dist = Vector3.Distance(gameObject.transform.position, player.position);
+
+            if (dist < 3f)
             {
-                GetComponent<Rigidbody>().isKinematic = false;
-                transform.parent = null;
-                beingCarried = false;
-                touched = false;
+                hasPlayer = true;
+            }
+            else
+            {
+                hasPlayer = false;
             }
 
-            if(Input.GetMouseButtonDown(0)) 
+            if (hasPlayer && Input.GetKeyDown(KeyCode.E))
             {
-                GetComponent<Rigidbody>().isKinematic= false;
-                transform.parent = null;
-                beingCarried = false;
-                GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce);
+                GetComponent<Rigidbody>().isKinematic = true;
+                distance = Vector3.Distance(gameObject.transform.position, player.position);
+                beingCarried = true;
             }
 
-            else if(Input.GetMouseButtonDown(1))
+            if (beingCarried)
             {
-                GetComponent <Rigidbody>().isKinematic= false;
-                transform.parent = null;
-                beingCarried = false;
+                if (touched)
+                {
+                    GetComponent<Rigidbody>().isKinematic = false;
+                    beingCarried = false;
+                    touched = false;
+                }
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    GetComponent<Rigidbody>().isKinematic = false;
+                    beingCarried = false;
+                    GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce);
+                }
+                else if (Input.GetMouseButtonDown(1))
+                {
+                    GetComponent<Rigidbody>().isKinematic = false;
+                    beingCarried = false;
+                }
+
+                // Update the position of the object relative to the player camera
+                objectPos = playerCam.position + playerCam.forward * distance;
+                transform.position = objectPos;
             }
         }
-    }
 
-    private void OnTriggerEnter()
-    {
-        if (beingCarried)
+        private void OnTriggerEnter(Collider other)
         {
-            touched = true;
+            if (beingCarried)
+            {
+                touched = true;
+            }
         }
     }
-    
-}
