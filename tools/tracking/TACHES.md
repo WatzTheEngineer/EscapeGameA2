@@ -79,3 +79,23 @@
     > Travaille sur la création et l'amélioration de l'UI/UX
 - Willem
     > Réalise le story mapping sur miro, travaille sur la gestion de l'inventaire du joueur
+
+## 11/12/2023
+- Logan
+    > Travaille sur le gameplay du tableau Mitnick et des énigmes
+- Louis
+    > Travaille à l'amélioration du shader
+- Thomas
+    > Travaille sur la création et l'amélioration de l'UI/UX
+- Willem
+    > Travaille sur la gestion de l'inventaire du joueur
+
+## 13/12/2023
+- Logan
+    > Travaille sur le gameplay du tableau Mitnick et des énigmes
+- Louis
+    > Travaille à l'amélioration du shader
+- Thomas
+    > Travaille sur la création et l'amélioration de l'UI/UX
+- Willem
+    > Travaille sur la gestion de l'inventaire du joueur
