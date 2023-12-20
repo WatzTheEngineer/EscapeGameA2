@@ -40,7 +40,6 @@ public class PickableObject : MonoBehaviour
                 transform.parent = null;
                 _beingCarried = false;
                 _touched = false;
-                _rigidbody.AddForce(playerCam.forward * (throwForce * -50));
                 _carriedObject = null; // Réinitialiser l'objet actuellement porté
             }
 
@@ -60,6 +59,7 @@ public class PickableObject : MonoBehaviour
 
             Vector3 objectPos = playerCam.position + playerCam.forward * 3f; // Ajuste la distance entre l'objet et la caméra du joueur
             transform.position = objectPos;
+            transform.position += Vector3.up * 1.05f;
         }
     }
 
