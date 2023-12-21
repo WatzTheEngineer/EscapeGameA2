@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1940.1907, g: 2280.1506, b: 3314.5806, a: 1}
+  m_IndirectSpecularColor: {r: 1940.1907, g: 2280.135, b: 3314.5806, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -333,7 +333,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -370,6 +370,7 @@ Transform:
   - {fileID: 1778798572}
   - {fileID: 446355901}
   - {fileID: 78266964}
+  - {fileID: 1408846070}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &72895462
@@ -1330,7 +1331,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -1611,7 +1612,6 @@ GameObject:
   - component: {fileID: 344338453}
   - component: {fileID: 344338452}
   - component: {fileID: 344338451}
-  - component: {fileID: 344338454}
   m_Layer: 0
   m_Name: CyberCafeRoof8
   m_TagString: Untagged
@@ -2169,7 +2169,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -2344,7 +2344,6 @@ GameObject:
   - component: {fileID: 446355904}
   - component: {fileID: 446355903}
   - component: {fileID: 446355902}
-  - component: {fileID: 446355905}
   m_Layer: 0
   m_Name: ParkingGround3
   m_TagString: Untagged
@@ -3007,7 +3006,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -3602,7 +3601,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -4543,7 +4542,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -4719,7 +4718,6 @@ GameObject:
   - component: {fileID: 771613721}
   - component: {fileID: 771613720}
   - component: {fileID: 771613719}
-  - component: {fileID: 771613722}
   m_Layer: 0
   m_Name: Wire5
   m_TagString: Untagged
@@ -5868,7 +5866,6 @@ GameObject:
   - component: {fileID: 1089298214}
   - component: {fileID: 1089298213}
   - component: {fileID: 1089298212}
-  - component: {fileID: 1089298215}
   m_Layer: 0
   m_Name: CyberCafeRoof7
   m_TagString: Untagged
@@ -6594,7 +6591,6 @@ GameObject:
   - component: {fileID: 1232201902}
   - component: {fileID: 1232201901}
   - component: {fileID: 1232201900}
-  - component: {fileID: 1232201903}
   m_Layer: 0
   m_Name: CyberCafeWall2
   m_TagString: Untagged
@@ -7356,7 +7352,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -10760,7 +10756,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -11495,7 +11491,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -12706,7 +12702,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
