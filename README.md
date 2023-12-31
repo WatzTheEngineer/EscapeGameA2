@@ -42,7 +42,3 @@ Liste de mots clés
 ## Licence
 
 Ce projet est sous licence [GNU General Public License v3.0](./LICENSE).
-
----
-
-N'hésitez pas à personnaliser ce modèle en fonction des besoins spécifiques de votre projet. Vous pouvez ajouter des sections supplémentaires telles que "Installation", "Utilisation", "Contributeurs", etc., en fonction des caractéristiques de votre projet.
