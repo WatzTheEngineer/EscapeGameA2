@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b65519c5d4c440bbd3346c0f9bae474, type: 3}
   m_Name: Letter
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Letter
   stackMaxCount: 1
   icon: {fileID: 21300000, guid: 3f509304b74000a48b80da29ff632364, type: 3}
   letterContent: Je suis une lettre

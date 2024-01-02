@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0149890533e34c42a4a0c6814b7fa636, type: 3}
   m_Name: Food
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Food
   stackMaxCount: 1
   icon: {fileID: 21300000, guid: 9255284ce2f4eb24ca429e58457ef905, type: 3}
   feedingFactor: 1

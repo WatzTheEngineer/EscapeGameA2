@@ -17,6 +17,7 @@ public class IventorySlot : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndDr
     
     private InventoryDisplay inventoryDisplay;
     private Button button;
+    
     public void Initialyze(InventoryDisplay _inventoryDisplay, int _index)
     {
         button = GetComponent<Button>();
@@ -53,7 +54,6 @@ public class IventorySlot : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndDr
     public void OnBeginDrag(PointerEventData eventData)
     {
         inventoryDisplay.dragSlot(index);
-        
         initiaImageLocallPosition = itemImage.transform.localPosition;
         itemImage.transform.SetParent(inventoryDisplay.transform);
     }

@@ -37,5 +37,10 @@ public struct Item
     
     public int Count => count;
 
+    public void CountLess1()
+    {
+        this.count--;
+    }
+
 }
 
