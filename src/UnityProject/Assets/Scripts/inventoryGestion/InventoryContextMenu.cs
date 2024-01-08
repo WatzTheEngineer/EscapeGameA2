@@ -33,7 +33,7 @@ public class InventoryContextMenu : MonoBehaviour
           {
               close();
               return;
-          };
+          }
           
           gameObject.SetActive(true);
           transform.position = slot.transform.position;
@@ -50,6 +50,7 @@ public class InventoryContextMenu : MonoBehaviour
 
       private void drop()
       {
+          
           inventory.PickItem(targetSlotID);
           close();
       }

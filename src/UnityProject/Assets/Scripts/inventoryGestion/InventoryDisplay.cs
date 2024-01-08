@@ -44,7 +44,10 @@ public class InventoryDisplay : MonoBehaviour
 
     public void dropOnSlot(int index)
     {
+        
         inventory.SwapSlot(dragedSlotIndex, index);
+        contextMenu.Select(index, slots[index]);
+        
     }
 
     #endregion

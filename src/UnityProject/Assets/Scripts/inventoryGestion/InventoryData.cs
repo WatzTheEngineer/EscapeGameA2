@@ -34,10 +34,24 @@
     { 
         if (slotID > items.Length) throw new System.Exception($"Id {slotID} out of inventory");
 
-        Item item = items[slotID];
-        items[slotID] = new Item();
-
-        return item;
+        if (items[slotID].Count == 1)
+        {
+            Item item = items[slotID];
+            items[slotID] = new Item();
+            return item;
+            
+        }else if (items[slotID].Count > 1)
+        {
+            Item item = items[slotID];
+            item.CountLess1();
+            items[slotID] = item;
+            
+            return item ;
+        }
+        else
+        {
+            return new Item();
+        }
     }
     
     
