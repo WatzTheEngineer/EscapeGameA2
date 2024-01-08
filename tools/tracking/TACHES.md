@@ -99,3 +99,13 @@
     > Travaille sur la création et l'amélioration de l'UI/UX
 - Willem
     > Travaille sur la gestion de l'inventaire du joueur
+
+## 08/01/2024
+- Logan
+    > Travaille sur la création de l'OS Windows intégré dans le tableau de Mitnick
+- Louis
+    > Réalise les modèles 3D pour le tableau de Mitnick. Travaille sur l'utilisation des portes.
+- Thomas
+    > Travaille sur l'amélioration de l'UI/UX des menus
+- Willem
+    > Travaille à l'amélioration de l'inventaire et la création d'un tutoriel
