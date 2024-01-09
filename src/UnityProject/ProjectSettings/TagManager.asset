@@ -8,6 +8,7 @@ TagManager:
   - FakeWall
   - ObjetRamassable
   - Pickable
+  - EXPLOSION
   layers:
   - Default
   - TransparentFX
