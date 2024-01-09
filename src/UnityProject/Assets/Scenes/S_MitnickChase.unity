@@ -1673,6 +1673,7 @@ GameObject:
   - component: {fileID: 247333130}
   - component: {fileID: 247333129}
   - component: {fileID: 247333133}
+  - component: {fileID: 247333134}
   m_Layer: 5
   m_Name: Tuto UI
   m_TagString: Untagged
@@ -1780,9 +1781,20 @@ MonoBehaviour:
   panelZqsdCaps: {fileID: 1280625207}
   panelSpaceCap: {fileID: 1888095853}
   panelECap: {fileID: 779178450}
-  zqsdPassable: 1
-  spacePassable: 0
-  ePassable: 0
+  canvasGroup: {fileID: 247333134}
+  waitTimeBetweenFade: 0.75
+--- !u!225 &247333134
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247333128}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &257267251
 GameObject:
   m_ObjectHideFlags: 0
@@ -5669,8 +5681,8 @@ MonoBehaviour:
   playerCamera: {fileID: 1973483089}
   walkSpeed: 6
   runSpeed: 12
-  jumpPower: 7
-  gravity: 10
+  jumpPower: 8
+  gravity: 18
   lookSpeed: 2
   lookXLimit: 45
   canMove: 1

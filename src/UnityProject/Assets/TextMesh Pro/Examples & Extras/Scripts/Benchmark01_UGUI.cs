@@ -1,21 +1,19 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
-
 
 namespace TMPro.Examples
 {
-    
     public class Benchmark01_UGUI : MonoBehaviour
     {
-
-        public int BenchmarkType = 0;
+        public int BenchmarkType;
 
         public Canvas canvas;
         public TMP_FontAsset TMProFont;
         public Font TextMeshFont;
 
         private TextMeshProUGUI m_textMeshPro;
+
         //private TextContainer m_textContainer;
         private Text m_textMesh;
 
@@ -32,12 +30,8 @@ namespace TMPro.Examples
         private Material m_material02;
 
 
-
-        IEnumerator Start()
+        private IEnumerator Start()
         {
-
-
-
             if (BenchmarkType == 0) // TextMesh Pro Component
             {
                 m_textMeshPro = gameObject.AddComponent<TextMeshProUGUI>();
@@ -66,9 +60,9 @@ namespace TMPro.Examples
                 //m_textMeshPro.fontColor = new Color32(255, 255, 255, 255);
 
                 m_material01 = m_textMeshPro.font.material;
-                m_material02 = Resources.Load<Material>("Fonts & Materials/LiberationSans SDF - BEVEL"); // Make sure the LiberationSans SDF exists before calling this...  
-
-
+                m_material02 =
+                    Resources.Load<Material>(
+                        "Fonts & Materials/LiberationSans SDF - BEVEL"); // Make sure the LiberationSans SDF exists before calling this...  
             }
             else if (BenchmarkType == 1) // TextMesh
             {
@@ -79,12 +73,9 @@ namespace TMPro.Examples
                     m_textMesh.font = TextMeshFont;
                     //m_textMesh.renderer.sharedMaterial = m_textMesh.font.material;
                 }
-                else
-                {
-                    //m_textMesh.font = Resources.Load("Fonts/ARIAL", typeof(Font)) as Font;
-                    //m_textMesh.renderer.sharedMaterial = m_textMesh.font.material;
-                }
 
+                //m_textMesh.font = Resources.Load("Fonts/ARIAL", typeof(Font)) as Font;
+                //m_textMesh.renderer.sharedMaterial = m_textMesh.font.material;
                 m_textMesh.fontSize = 48;
                 m_textMesh.alignment = TextAnchor.MiddleCenter;
 
@@ -92,20 +83,20 @@ namespace TMPro.Examples
             }
 
 
-
-            for (int i = 0; i <= 1000000; i++)
+            for (var i = 0; i <= 1000000; i++)
             {
                 if (BenchmarkType == 0)
                 {
-                    m_textMeshPro.text = label01 + (i % 1000);
+                    m_textMeshPro.text = label01 + i % 1000;
                     if (i % 1000 == 999)
-                        m_textMeshPro.fontSharedMaterial = m_textMeshPro.fontSharedMaterial == m_material01 ? m_textMeshPro.fontSharedMaterial = m_material02 : m_textMeshPro.fontSharedMaterial = m_material01;
-
-
-
+                        m_textMeshPro.fontSharedMaterial = m_textMeshPro.fontSharedMaterial == m_material01
+                            ? m_textMeshPro.fontSharedMaterial = m_material02
+                            : m_textMeshPro.fontSharedMaterial = m_material01;
                 }
                 else if (BenchmarkType == 1)
-                    m_textMesh.text = label02 + (i % 1000).ToString();
+                {
+                    m_textMesh.text = label02 + (i % 1000);
+                }
 
                 yield return null;
             }
@@ -120,7 +111,7 @@ namespace TMPro.Examples
         {
             if (BenchmarkType == 0)
             {
-                m_textMeshPro.text = (m_frame % 1000).ToString();            
+                m_textMeshPro.text = (m_frame % 1000).ToString();
             }
             else if (BenchmarkType == 1)
             {
@@ -131,5 +122,4 @@ namespace TMPro.Examples
         }
         */
     }
-
 }
