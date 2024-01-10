@@ -9,6 +9,7 @@ TagManager:
   - ObjetRamassable
   - Pickable
   - EXPLOSION
+  - InteractiveObject
   layers:
   - Default
   - TransparentFX

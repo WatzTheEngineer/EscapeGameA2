@@ -1,31 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ComputerController : MonoBehaviour
+public class ComputerInteraction : MonoBehaviour
 {
-    public GameObject panel;
-    public bool isVisible = false;
+    public string objectName = "ObjectToInteract"; // Remplacez "ObjectToInteract" par le nom de votre objet
 
-    private void Update()
+    void Update()
     {
-        panel.SetActive(isVisible);
-
-        ifICapPressedOpenInventory();
-
-
-    }
-
-    void ifICapPressedOpenInventory()
-    {
-        if (Input.GetKeyDown(KeyCode.O))
+        // Vérifie si la touche "E" est enfoncée
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            isVisible = !isVisible;
-            panel.SetActive(isVisible);
+            // Rayon depuis le centre de l'écran
+            Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
 
-            Cursor.visible = isVisible;
-            Cursor.lockState = isVisible ? CursorLockMode.None : CursorLockMode.Locked;
+            RaycastHit hit;
+            // Vérifie si le rayon touche un objet
+            if (Physics.Raycast(ray, out hit))
+            {
+                // Vérifie si l'objet touché a le même nom que celui spécifié dans objectName
+                if (hit.collider.gameObject.name == objectName)
+                {
+                    // Si c'est l'objet spécifique, envoie un message dans la console
+                    Debug.Log("Touche 'E' pressée sur : " + objectName);
+                }
+            }
         }
     }
 }
-
