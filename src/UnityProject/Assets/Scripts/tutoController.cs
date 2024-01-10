@@ -1,82 +1,112 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace DefaultNamespace
 {
-    public class tutoController : MonoBehaviour
+    public class TutoController : MonoBehaviour
     {
-        public GameObject panelZqsdCaps;
-        public GameObject panelSpaceCap;
-        public GameObject panelECap;
-        
-        public bool zqsdPassable = true;
-        public bool spacePassable = false;
-        public bool ePassable = false;
+        [SerializeField] private GameObject panelZqsdCaps;
+        [SerializeField] private GameObject panelSpaceCap;
+        [SerializeField] private GameObject panelECap;
+        [SerializeField] private GameObject panelClickCap;
+        [SerializeField] private GameObject panelShiftCap;
+        [SerializeField] private CanvasGroup canvasGroup;
+        [SerializeField] private float waitTimeBetweenFade;
+
+        private bool _isZqsdActive = true;
+        private bool _isSpaceActive;
+        private bool _isEActive;
+        private bool _isClickActive;
+        private bool _isShiftActive;
 
         private void Start()
         {
-            panelZqsdCaps.SetActive(true);
-            panelSpaceCap.SetActive(false);
-            panelECap.SetActive(false);   
+            ActivatePanel(panelZqsdCaps, true);
+            ActivatePanel(panelSpaceCap, false);
+            ActivatePanel(panelECap, false);
+            ActivatePanel(panelClickCap, false);
+            ActivatePanel(panelShiftCap, false);
         }
 
         private void Update()
         {
-            if (zqsdPassable)
+            if (canvasGroup.alpha >= 1)
             {
-                if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
-                {
-                    StartCoroutine(HidePanelAfterDelay(5f,panelZqsdCaps));
-                    StartCoroutine(ShowPanelAfterDelay(5f,panelSpaceCap));
-                    zqsdPassable = !zqsdPassable;
-                    spacePassable = !spacePassable;
-                }
+                CheckForKeyPress();
             }
+        }
 
-            if (spacePassable)
+        private void CheckForKeyPress()
+        {
+            if (_isZqsdActive && IsZqsdKey())
             {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    StartCoroutine(HidePanelAfterDelay(3f,panelSpaceCap));
-                    StartCoroutine(ShowPanelAfterDelay(3f,panelECap));
-                    spacePassable = !spacePassable;
-                    ePassable = !ePassable;
-                }
+                StartCoroutine(TransitionToNextPanel(panelZqsdCaps, panelSpaceCap, waitTimeBetweenFade));
+                _isZqsdActive = false;
+                _isSpaceActive = true;
             }
-            
-            if (ePassable)
+            else if (_isSpaceActive && Input.GetKeyDown(KeyCode.Space))
             {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    StartCoroutine(HidePanelAfterDelay(3f,panelECap));
-                    ePassable = !ePassable;
-                }
+                StartCoroutine(TransitionToNextPanel(panelSpaceCap, panelECap, waitTimeBetweenFade));
+                _isSpaceActive = false;
+                _isEActive = true;
             }
-            
+            else if (_isEActive && Input.GetKeyDown(KeyCode.E))
+            {
+                StartCoroutine(TransitionToNextPanel(panelECap,panelClickCap,waitTimeBetweenFade));
+                _isEActive = false;
+                _isClickActive = true;
+            }
+            else if (_isClickActive && (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)))
+            {
+                StartCoroutine(TransitionToNextPanel(panelClickCap,panelShiftCap,waitTimeBetweenFade));
+                _isClickActive = false;
+                _isShiftActive = true;
+            }
+            else if (_isShiftActive && (Input.GetKeyDown(KeyCode.LeftShift)))
+            {
+                StartCoroutine(FadeOutPanel(panelShiftCap));
+                _isShiftActive = false;
+            }
         }
-        
-        IEnumerator HidePanelAfterDelay(float delay,GameObject panel)
+
+        private IEnumerator TransitionToNextPanel(GameObject currentPanel, GameObject nextPanel, float delay)
+        {
+            yield return StartCoroutine(FadeOutPanel(currentPanel));
+            yield return StartCoroutine(FadeInPanel(nextPanel, delay));
+        }
+
+        private IEnumerator FadeOutPanel(GameObject panel)
+        {
+            while (canvasGroup.alpha > 0)
+            {
+                canvasGroup.alpha -= Time.deltaTime;
+                yield return null;
+            }
+            ActivatePanel(panel, false);
+        }
+
+        private IEnumerator FadeInPanel(GameObject panel, float delay)
         {
             yield return new WaitForSeconds(delay);
-            hidePanel(panel);
+            ActivatePanel(panel, true);
+            canvasGroup.alpha = 0;
+            while (canvasGroup.alpha < 1)
+            {
+                canvasGroup.alpha += Time.deltaTime;
+                yield return null;
+            }
         }
-        
-        IEnumerator ShowPanelAfterDelay(float delay,GameObject panel)
+
+        private bool IsZqsdKey()
         {
-            yield return new WaitForSeconds(delay);
-            showPanel(panel);
+            return Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) ||
+                   Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D);
         }
-        
-        private void hidePanel(GameObject panel)
+
+        private void ActivatePanel(GameObject panel, bool isActive)
         {
-            panel.SetActive(false);
-        }
-        
-        private void showPanel(GameObject panel)
-        {
-            panel.SetActive(true);
+            panel.SetActive(isActive);
         }
     }
 }

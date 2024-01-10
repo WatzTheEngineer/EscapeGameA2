@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/S_MitnickChase.unity
     guid: e6003f5692ec6344fac06eaab390b870
+  - enabled: 1
+    path: Assets/Scenes/S_Computer.unity
+    guid: f8bdd156a481e9d4e97f2a2c53f6fc8a
   m_configObjects: {}
