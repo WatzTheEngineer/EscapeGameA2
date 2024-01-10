@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     bool paused = false;
     bool isRunning = false;
     public bool isVisible = false;
+    public bool debugMode = false;
     public GameObject pauseMenuUI;
 
     
@@ -19,6 +20,36 @@ public class GameManager : MonoBehaviour
             paused = togglePause();
             OnDisplay();
         }
+
+        if (Input.GetKeyDown(KeyCode.KeypadMultiply))
+        {
+            debugMode = !debugMode;
+            if (debugMode)
+            {
+                Debug.Log("DEBUG MODE ON");
+            }
+            else
+            {
+                Debug.Log("DEBUG MODE OFF");
+            }
+        }
+        if (debugMode)
+        {
+            
+            if (Input.GetKeyDown(KeyCode.KeypadPlus))
+            {
+                Time.timeScale += 0.25f;
+                Debug.Log("TICK : " + Time.timeScale);
+
+            }
+            if (Input.GetKeyDown(KeyCode.KeypadMinus))
+            {
+                Time.timeScale -= 0.25f;
+                Debug.Log("TICK : " + Time.timeScale);
+            }
+       
+
+        }
     }
     void OnDisplay()
     {
@@ -26,7 +57,7 @@ public class GameManager : MonoBehaviour
         {
             if (!isRunning)
             {
-                isRunning = true;
+                isRunning = !isRunning;
                 isVisible = !isVisible;
                 pauseMenuUI.SetActive(true);
                 Cursor.visible = isVisible;

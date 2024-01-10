@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour
 {
-    public Camera[] cameras; // Tableau des caméras à changer
-    private int currentCameraIndex; // Index de la caméra actuelle
-    private bool isRunning = true;
+    public Camera[] cameras; // Tableau des camï¿½ras ï¿½ changer
+    private int currentCameraIndex; // Index de la camï¿½ra actuelle
+    //private bool isRunning = true;
     public string[] tagsToEnableDisable;
 
     void Start()
     {
-        currentCameraIndex = 0; // Commence avec la première caméra
+        currentCameraIndex = 0; // Commence avec la premiï¿½re camï¿½ra
         UpdateCameraVisibility();
     }
 
@@ -29,10 +29,10 @@ public class CameraSwitch : MonoBehaviour
 
     void SwitchCamera()
     {
-        currentCameraIndex++; // Incrémente l'index de la caméra actuelle
+        currentCameraIndex++; // Incrï¿½mente l'index de la camï¿½ra actuelle
         if (currentCameraIndex >= cameras.Length) // Si on atteint la fin du tableau
         {
-            currentCameraIndex = 0; // Reviens à la première caméra
+            currentCameraIndex = 0; // Reviens ï¿½ la premiï¿½re camï¿½ra
         }
         UpdateCameraVisibility();
     }
@@ -43,11 +43,11 @@ public class CameraSwitch : MonoBehaviour
         {
             if (i == currentCameraIndex)
             {
-                cameras[i].enabled = true; // Active la caméra actuelle
+                cameras[i].enabled = true; // Active la camï¿½ra actuelle
             }
             else
             {
-                cameras[i].enabled = false; // Désactive les autres caméras
+                cameras[i].enabled = false; // Dï¿½sactive les autres camï¿½ras
             }
         }
     }
