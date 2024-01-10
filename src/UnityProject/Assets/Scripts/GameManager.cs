@@ -19,29 +19,21 @@ public class GameManager : MonoBehaviour
             paused = togglePause();
             OnDisplay();
         }
-            
-
-
     }
-
     void OnDisplay()
     {
         if (paused)
         {
             if (!isRunning)
             {
-                
                 isRunning = true;
                 isVisible = !isVisible;
                 pauseMenuUI.SetActive(true);
                 Cursor.visible = isVisible;
                 Cursor.lockState = isVisible ? CursorLockMode.None : CursorLockMode.Locked;
             }
-
-          
         }
     }
-
     public void WindowsQuit()
     {
         pauseMenuUI.SetActive(false);
