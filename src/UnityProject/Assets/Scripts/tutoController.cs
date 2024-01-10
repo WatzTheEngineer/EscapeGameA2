@@ -9,18 +9,24 @@ namespace DefaultNamespace
         [SerializeField] private GameObject panelZqsdCaps;
         [SerializeField] private GameObject panelSpaceCap;
         [SerializeField] private GameObject panelECap;
+        [SerializeField] private GameObject panelClickCap;
+        [SerializeField] private GameObject panelShiftCap;
         [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private float waitTimeBetweenFade;
 
         private bool _isZqsdActive = true;
         private bool _isSpaceActive;
         private bool _isEActive;
+        private bool _isClickActive;
+        private bool _isShiftActive;
 
         private void Start()
         {
             ActivatePanel(panelZqsdCaps, true);
             ActivatePanel(panelSpaceCap, false);
             ActivatePanel(panelECap, false);
+            ActivatePanel(panelClickCap, false);
+            ActivatePanel(panelShiftCap, false);
         }
 
         private void Update()
@@ -47,8 +53,20 @@ namespace DefaultNamespace
             }
             else if (_isEActive && Input.GetKeyDown(KeyCode.E))
             {
-                StartCoroutine(FadeOutPanel(panelECap));
+                StartCoroutine(TransitionToNextPanel(panelECap,panelClickCap,waitTimeBetweenFade));
                 _isEActive = false;
+                _isClickActive = true;
+            }
+            else if (_isClickActive && (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)))
+            {
+                StartCoroutine(TransitionToNextPanel(panelClickCap,panelShiftCap,waitTimeBetweenFade));
+                _isClickActive = false;
+                _isShiftActive = true;
+            }
+            else if (_isShiftActive && (Input.GetKeyDown(KeyCode.LeftShift)))
+            {
+                StartCoroutine(FadeOutPanel(panelShiftCap));
+                _isShiftActive = false;
             }
         }
 

@@ -2082,6 +2082,8 @@ MonoBehaviour:
   panelZqsdCaps: {fileID: 1280625207}
   panelSpaceCap: {fileID: 1888095853}
   panelECap: {fileID: 779178450}
+  panelClickCap: {fileID: 10728906}
+  panelShiftCap: {fileID: 1915155516}
   canvasGroup: {fileID: 247333134}
   waitTimeBetweenFade: 0.75
 --- !u!225 &247333134
@@ -16819,7 +16821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 716770672}
   playerCam: {fileID: 1973483092}
-  throwForce: 1000
+  throwForce: 300
   pickDistance: 4
 --- !u!54 &1914869662
 Rigidbody:
@@ -16882,7 +16884,7 @@ GameObject:
   - component: {fileID: 1915155519}
   - component: {fileID: 1915155518}
   m_Layer: 5
-  m_Name: PanelSprint
+  m_Name: PanelShift
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17015,7 +17017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 716770672}
   playerCam: {fileID: 1973483092}
-  throwForce: 10
+  throwForce: 300
   pickDistance: 4
 --- !u!1 &1928890368
 GameObject:
@@ -19560,7 +19562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 716770672}
   playerCam: {fileID: 1973483092}
-  throwForce: 10
+  throwForce: 300
   pickDistance: 4
 --- !u!54 &2146976203
 Rigidbody:
