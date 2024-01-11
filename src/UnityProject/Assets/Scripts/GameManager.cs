@@ -10,9 +10,11 @@ public class GameManager : MonoBehaviour
     public bool isVisible = false;
     public bool debugMode = false;
     public GameObject pauseMenuUI;
+    public GameObject obj;
+    ComputerController script;
 
-    
-   
+
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.O))
@@ -26,7 +28,7 @@ public class GameManager : MonoBehaviour
             debugMode = !debugMode;
             if (debugMode)
             {
-                Debug.Log("DEBUG MODE ON");
+                Debug.Log("DEBUG MODE ON\n| + : Increase TickRate\n| - : Decrease TickRate");
             }
             else
             {
@@ -67,12 +69,15 @@ public class GameManager : MonoBehaviour
     }
     public void WindowsQuit()
     {
+        Debug.Log("Assert2");
         pauseMenuUI.SetActive(false);
         isRunning = !isRunning;
         isVisible = !isVisible;
         Cursor.visible = isVisible;
         Cursor.lockState = isVisible ? CursorLockMode.None : CursorLockMode.Locked;
         paused = togglePause();
+        script = obj.GetComponent<ComputerController>();
+        script.enabled = false;
     }
 
     bool togglePause()

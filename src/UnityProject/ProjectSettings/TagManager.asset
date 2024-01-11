@@ -10,6 +10,7 @@ TagManager:
   - Pickable
   - EXPLOSION
   - InteractiveObject
+  - InteractiveComputer
   layers:
   - Default
   - TransparentFX

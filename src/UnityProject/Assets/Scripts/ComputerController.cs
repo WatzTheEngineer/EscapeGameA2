@@ -1,28 +1,65 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class ComputerInteraction : MonoBehaviour
+public class ComputerController : MonoBehaviour
 {
-    public string objectName = "ObjectToInteract"; // Remplacez "ObjectToInteract" par le nom de votre objet
+    bool paused = false;
+    bool isRunning = false;
+    public bool isVisible = true;
+    public bool debugMode = false;
+    public GameObject pauseMenuUI;
+    public GameObject obj;
+    ComputerController script;
 
-    void Update()
+    
+
+    public void WindowsLaunch()
     {
-        // Vérifie si la touche "E" est enfoncée
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            // Rayon depuis le centre de l'écran
-            Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+        paused = togglePause();
+        
+        OnDisplay();
+    }
 
-            RaycastHit hit;
-            // Vérifie si le rayon touche un objet
-            if (Physics.Raycast(ray, out hit))
+    void OnDisplay()
+    {
+        if (paused)
+        {
+            if (!isRunning)
             {
-                // Vérifie si l'objet touché a le même nom que celui spécifié dans objectName
-                if (hit.collider.gameObject.name == objectName)
-                {
-                    // Si c'est l'objet spécifique, envoie un message dans la console
-                    Debug.Log("Touche 'E' pressée sur : " + objectName);
-                }
+                isRunning = !isRunning;
+                isVisible = !isVisible;
+                pauseMenuUI.SetActive(true);
+                Cursor.visible = isVisible;
+                Cursor.lockState = isVisible ? CursorLockMode.None : CursorLockMode.Locked;
             }
+        }
+    }
+    public void WindowsQuit()
+    {
+        Debug.Log("Assert");
+        pauseMenuUI.SetActive(false);
+        isRunning = !isRunning;
+        isVisible = !isVisible;
+        Cursor.visible = isVisible;
+        Cursor.lockState = isVisible ? CursorLockMode.None : CursorLockMode.Locked;
+        paused = togglePause();
+        script = obj.GetComponent<ComputerController>();
+        script.enabled = false;
+    }
+
+    bool togglePause()
+    {
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+            return (false);
+        }
+        else
+        {
+            Time.timeScale = 0f;
+            return (true);
         }
     }
 }
