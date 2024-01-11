@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Utils;
 
-public class InteractiveController : MonoBehaviour
+public class InteractiveController : MonoBehaviour,Raycastable
 {
     private Animator objectAnimation;
     private bool isOpen = false;
