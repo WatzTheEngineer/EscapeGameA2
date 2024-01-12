@@ -7,6 +7,6 @@ public class TurnLightOn : MonoBehaviour, ITriggerable
 {
     public void Trigger()
     {
-        Debug.Log("Lumiere allumée");
+        gameObject.SetActive(true);
     }
 }
