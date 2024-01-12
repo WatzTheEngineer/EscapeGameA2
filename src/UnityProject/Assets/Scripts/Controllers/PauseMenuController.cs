@@ -9,11 +9,12 @@ public class PauseMenuController : MonoBehaviour
     public bool isVisible = false;
     public bool isPaused = false;
     public GameObject monObj;
+    public static bool isOn;
 
     FPSController script;
     private void Start()
     {
-        PauseMenu.isOn = false;
+        isOn = false;
         
         
     }
@@ -40,7 +41,7 @@ public class PauseMenuController : MonoBehaviour
     {
         isVisible = !isVisible;
         pauseMenu.SetActive(!pauseMenu.activeSelf);
-        PauseMenu.isOn = pauseMenu.activeSelf;
+        isOn = pauseMenu.activeSelf;
         Cursor.visible = isVisible;
         Cursor.lockState = isVisible ? CursorLockMode.None : CursorLockMode.Locked;
     }
@@ -56,7 +57,7 @@ public class PauseMenuController : MonoBehaviour
 
     public void quitButton()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
     bool togglePause()
     {

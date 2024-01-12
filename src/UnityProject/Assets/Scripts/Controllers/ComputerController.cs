@@ -10,16 +10,15 @@ public class ComputerController : MonoBehaviour
     bool paused = false;
     bool isRunning = false;
     public bool isVisible = true;
-    public bool debugMode = false;
     public GameObject pauseMenuUI;
-    public GameObject obj;
-    ComputerController script;
+    public GameObject computer;
+    ComputerController ComputerControllerScript;
     public PlugHeadConttroller plugHeadConttroller;
 
 
     public void WindowsLaunch()
     {
-        plugHeadConttroller = obj.GetComponent<PlugHeadConttroller>();
+        plugHeadConttroller = computer.GetComponent<PlugHeadConttroller>();
 
         if (plugHeadConttroller.GetHeadPlugState())
         {
@@ -32,29 +31,26 @@ public class ComputerController : MonoBehaviour
 
     void OnDisplay()
     {
-        if (paused)
+        if (paused && !isRunning)
         {
-            if (!isRunning)
-            {
                 isRunning = !isRunning;
                 isVisible = !isVisible;
                 pauseMenuUI.SetActive(true);
                 Cursor.visible = isVisible;
                 Cursor.lockState = isVisible ? CursorLockMode.None : CursorLockMode.Locked;
-            }
+ 
         }
     }
     public void WindowsQuit()
     {
-        Debug.Log("Assert");
         pauseMenuUI.SetActive(false);
         isRunning = !isRunning;
         isVisible = !isVisible;
         Cursor.visible = isVisible;
         Cursor.lockState = isVisible ? CursorLockMode.None : CursorLockMode.Locked;
         paused = togglePause();
-        script = obj.GetComponent<ComputerController>();
-        script.enabled = false;
+        ComputerControllerScript = computer.GetComponent<ComputerController>();
+        ComputerControllerScript.enabled = false;
     }
 
     bool togglePause()
