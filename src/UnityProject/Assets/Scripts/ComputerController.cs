@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class ComputerController : MonoBehaviour
 {
@@ -12,14 +14,20 @@ public class ComputerController : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject obj;
     ComputerController script;
+    public PlugHeadConttroller plugHeadConttroller;
 
-    
 
     public void WindowsLaunch()
     {
-        paused = togglePause();
+        plugHeadConttroller = obj.GetComponent<PlugHeadConttroller>();
+
+        if (plugHeadConttroller.GetHeadPlugState())
+        {
+            paused = togglePause();
         
-        OnDisplay();
+            OnDisplay();
+        }
+        
     }
 
     void OnDisplay()
