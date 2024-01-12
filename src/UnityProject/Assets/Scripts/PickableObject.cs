@@ -9,6 +9,9 @@ public class PickableObject : MonoBehaviour
     private bool _hasPlayer;
     private bool _beingCarried;
     private bool _touched;
+
+    
+
     [SerializeField] private float pickDistance;
 
     private static GameObject _carriedObject; // Objet actuellement porté
@@ -60,6 +63,14 @@ public class PickableObject : MonoBehaviour
             Vector3 objectPos = playerCam.position + playerCam.forward * 3f; // Ajuste la distance entre l'objet et la caméra du joueur
             transform.position = objectPos;
             transform.position += Vector3.up * 1.05f;
+            transform.rotation = playerCam.rotation ;
+            transform.rotation *= Quaternion.Euler(-15f, 45f, -15f);
+            transform.position -= new Vector3(0, 0.5f, 0);
+
+
+
+
+
         }
     }
 
@@ -70,4 +81,5 @@ public class PickableObject : MonoBehaviour
             _touched = true;
         }
     }
+
 }
