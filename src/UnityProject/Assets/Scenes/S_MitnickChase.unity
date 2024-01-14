@@ -38895,8 +38895,8 @@ Transform:
   m_GameObject: {fileID: 945970034}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 126.3245, y: 183.6814, z: -285.9405}
-  m_LocalScale: {x: 61.012875, y: 0.12792, z: 44.209724}
+  m_LocalPosition: {x: 126.3245, y: 183.2543, z: -285.9405}
+  m_LocalScale: {x: 61.012875, y: 0, z: 44.209724}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1608988739}
@@ -55732,12 +55732,13 @@ GameObject:
   - component: {fileID: 1281855872}
   - component: {fileID: 1281855871}
   - component: {fileID: 1281855874}
+  - component: {fileID: 1281855875}
   m_Layer: 0
   m_Name: ParkFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1281855870
 Transform:
@@ -55748,7 +55749,7 @@ Transform:
   m_GameObject: {fileID: 1281855869}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75.455, y: 185.58, z: -221.7209}
+  m_LocalPosition: {x: 75.455, y: 185.49, z: -221.7209}
   m_LocalScale: {x: 52.09409, y: 0.12792, z: 69.909615}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55846,6 +55847,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1281855875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281855869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa98d3ce21cf05c4e94dfc78e360dc16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1283871214
 GameObject:
   m_ObjectHideFlags: 0
@@ -68878,6 +68891,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1281855875}
+        m_TargetAssemblyTypeName: RouterController, Assembly-CSharp
+        m_MethodName: capy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1610032186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73295,7 +73320,7 @@ Transform:
   m_GameObject: {fileID: 1693163905}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75.1444, y: 184.9, z: -221.9472}
+  m_LocalPosition: {x: 75.1444, y: 185.4, z: -221.9472}
   m_LocalScale: {x: 51.48055, y: 0.12792, z: 69.457306}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -88196,7 +88221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 04ccbee829c80344b95a4cc22f390f46, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 04ccbee829c80344b95a4cc22f390f46, type: 3}
       propertyPath: m_StaticEditorFlags
