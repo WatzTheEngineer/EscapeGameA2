@@ -18,6 +18,8 @@ namespace Utils
         [SerializeField] private KeyCode openKey = KeyCode.E;
         private Raycastable _raycastedInteractive;
         private ComputerController _raycastComputerInteraction;
+        public GameObject _lock;
+        public lockPickingController _lockPickingController;
 
 
         private void Update()
@@ -33,7 +35,9 @@ namespace Utils
 
                     if (Input.GetKeyDown(openKey))
                     {
-                        _raycastedInteractive.PlayAnimation();
+                        _lockPickingController = _lock.GetComponent<lockPickingController>();
+                        _lockPickingController.launchLockPicking();
+                        //_raycastedInteractive.PlayAnimation();
                     }
                 }
             RaycastHit hit2;

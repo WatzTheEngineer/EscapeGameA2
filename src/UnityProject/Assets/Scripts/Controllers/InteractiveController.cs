@@ -9,6 +9,7 @@ public class InteractiveController : MonoBehaviour,Raycastable
 {
     private Animator objectAnimation;
     private bool isOpen = false;
+
     [SerializeField] private GameObject[] triggeredObjects;
 
     private void Awake()
