@@ -12,6 +12,7 @@ TagManager:
   - InteractiveObject
   - InteractiveComputer
   - interactiveCrate
+  - InteractiveDoor
   layers:
   - Default
   - TransparentFX

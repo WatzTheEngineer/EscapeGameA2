@@ -14,14 +14,17 @@ public class ComputerController : MonoBehaviour
     public GameObject computer;
     ComputerController ComputerControllerScript;
     public PlugHeadConttroller plugHeadConttroller;
+    
 
 
     public void WindowsLaunch()
     {
         plugHeadConttroller = computer.GetComponent<PlugHeadConttroller>();
+        
 
         if (plugHeadConttroller.GetHeadPlugState())
         {
+            
             paused = togglePause();
         
             OnDisplay();

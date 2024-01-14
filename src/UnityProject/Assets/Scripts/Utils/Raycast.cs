@@ -12,6 +12,7 @@ namespace Utils
 
         private const string Tag = "InteractiveObject";
         private const string Tag2 = "InteractiveComputer";
+        private const string Tag3 = "InteractiveDoor";
         [SerializeField] private int rayLength;
         [SerializeField] private LayerMask layerMaskInterract;
         [SerializeField] private string exculdeLayerName;
@@ -19,7 +20,7 @@ namespace Utils
         private Raycastable _raycastedInteractive;
         private ComputerController _raycastComputerInteraction;
         public GameObject _lock;
-        public lockPickingController _lockPickingController;
+        private lockPickingController _lockPickingController;
 
 
         private void Update()
@@ -35,9 +36,8 @@ namespace Utils
 
                     if (Input.GetKeyDown(openKey))
                     {
-                        _lockPickingController = _lock.GetComponent<lockPickingController>();
-                        _lockPickingController.launchLockPicking();
-                        //_raycastedInteractive.PlayAnimation();
+                       
+                        _raycastedInteractive.PlayAnimation();
                     }
                 }
             RaycastHit hit2;
@@ -54,6 +54,22 @@ namespace Utils
 
                         
                         _raycastComputerInteraction.WindowsLaunch();
+                    }
+                }
+            RaycastHit hitDoor;
+            var fwdDoor = transform.TransformDirection(Vector3.forward);
+            var maskDoor = (1 << LayerMask.NameToLayer(exculdeLayerName)) | layerMaskInterract.value;
+            if (Physics.Raycast(transform.position, fwdDoor, out hitDoor, rayLength, maskDoor))
+                if (hit.collider.CompareTag(Tag3))
+                {
+                    
+
+
+                    if (Input.GetKeyDown(openKey))
+                    {
+                        _lockPickingController = _lock.GetComponent<lockPickingController>();
+                        _lockPickingController.launchLockPicking();
+                        
                     }
                 }
         }
