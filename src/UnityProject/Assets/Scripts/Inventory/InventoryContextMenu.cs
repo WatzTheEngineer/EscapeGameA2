@@ -47,14 +47,13 @@ public class InventoryContextMenu : MonoBehaviour
       
       
       #region Input
-
+/*
       private void drop()
       {
-          
           inventory.PickItem(targetSlotID);
           close();
       }
-      
+  */    
       
       private void close()
       {

@@ -29,9 +29,9 @@ public class Inventory : MonoBehaviour
         return item;
     }
 
-    public Item PickItem(int slotId)
+    public Item PickItem(Item item)
     {
-        Item result = data.Pick(slotId);
+        Item result = data.Pick(item);
         
         display.updateDisplay(data.items);
 

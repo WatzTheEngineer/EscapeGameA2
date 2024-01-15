@@ -26,6 +26,6 @@ public class test : MonoBehaviour
     [ContextMenu("Test pick")]
     private void pick()
     {
-        pickedItem = inventory.PickItem(1);
+        pickedItem = inventory.PickItem(pickedItem);
     }
 }

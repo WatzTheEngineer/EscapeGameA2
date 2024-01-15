@@ -30,31 +30,36 @@
         }
     }
 
-    public Item Pick(int slotID)
-    { 
-        if (slotID > items.Length) throw new System.Exception($"Id {slotID} out of inventory");
+    public Item Pick(Item itemToPick)
+    {
+        int slotID = -1;
+        foreach (var x in items)
+        {
+            slotID++;
+            if (x.Equals(itemToPick))
+            {
+                if (items[slotID].Count == 1)
+                {
+                    Item item = items[slotID];
+                    items[slotID] = new Item();
+                    return item;
 
-        if (items[slotID].Count == 1)
-        {
-            Item item = items[slotID];
-            items[slotID] = new Item();
-            return item;
+                }
+                else if (items[slotID].Count > 1)
+                {
+                    Item item = items[slotID];
+                    item.CountLess1();
+                    items[slotID] = item;
+
+                    return item;
+                }
+            }
             
-        }else if (items[slotID].Count > 1)
-        {
-            Item item = items[slotID];
-            item.CountLess1();
-            items[slotID] = item;
-            
-            return item ;
         }
-        else
-        {
-            return new Item();
-        }
+        return new Item();
     }
-    
-    
+
+
     public void Swap(int slotId1, int slotId2)
     {
         if (slotId1 > items.Length || slotId2 > items.Length) throw new System.Exception($"Id {slotId1} or {slotId2} out of inventory");

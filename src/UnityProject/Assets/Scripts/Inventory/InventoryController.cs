@@ -5,15 +5,25 @@ namespace inventoryGestion
 {
     public class InventoryController : MonoBehaviour
     {
+        [SerializeField] private Item[] startItems;
         public GameObject panel;
         public bool isVisible = false;
-        
+        private Inventory inventory;
+
+        private void Start()
+        {
+            inventory = FindObjectOfType<Inventory>();
+            foreach (Item item in startItems)
+            {
+                inventory.AddItem(item);
+            }
+        }
+
         private void Update()
         {
             panel.SetActive(isVisible);
             
             ifICapPressedOpenInventory();
-            
             
         }
         
