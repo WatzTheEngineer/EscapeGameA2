@@ -1,26 +1,43 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class LineController : MonoBehaviour
 {
-    private LineRenderer lineRenderer;
-    [SerializeField] private Transform[] points;
-    
-    public void Start()
+    [SerializeField] public Transform[] points;
+    private LineRenderer _lineRenderer;
+
+    public LineRenderer LineRenderer
     {
-        lineRenderer = GetComponent<LineRenderer>();
+        get
+        {
+            if (_lineRenderer == null)
+            {
+                _lineRenderer = GetComponent<LineRenderer>();
+            }
+            return _lineRenderer;
+        }
     }
 
-    public void Update()
+    public Transform[] Points
     {
-        lineRenderer.positionCount = points.Length;
-        
-        for (int i = 0; i < points.Length; i++)
+        get { return points; }
+        set { points = value; }
+    }
+
+    public void Start()
+    {
+        LineRenderer.positionCount = Points.Length;
+    }
+
+    private void Update()
+    {
+        UpdateLineRendererPositions();
+    }
+
+    public void UpdateLineRendererPositions()
+    {
+        for (int i = 0; i < Points.Length; i++)
         {
-            lineRenderer.SetPosition(i, points[i].position);
-        } 
+            LineRenderer.SetPosition(i, Points[i].position);
+        }
     }
 }
