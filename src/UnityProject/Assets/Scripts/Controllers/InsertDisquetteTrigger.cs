@@ -10,16 +10,19 @@ namespace DefaultNamespace
         [SerializeField] private Item ActionItem;
         public void Start()
         {
+            isInserted = false;
             gameObject.SetActive(false);
         }
 
         public void Trigger()
         {
-            isInserted = !isInserted;
-            gameObject.SetActive(true);
-            gameObject.GetComponent<Animator>().Play("OPEN",0,0.0f);
-            inventory = FindObjectOfType<Inventory>();
-            inventory.PickItem(ActionItem);
+
+                isInserted = !isInserted;
+                gameObject.SetActive(true);
+                gameObject.GetComponent<Animator>().Play("OPEN",0,0.0f);
+                inventory = FindObjectOfType<Inventory>();
+                inventory.PickItem(ActionItem);
+
         }
     
         public bool GetHeadPlugState()
