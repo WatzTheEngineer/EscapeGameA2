@@ -1,21 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using DefaultNamespace;
 using UnityEngine;
 
-public class TurnElectricitytOn : MonoBehaviour, ITriggerable
+public class TurnElectricityOn : MonoBehaviour, ITriggerable
 {
-    private bool isOn = false;
-    
+    private bool _isOn;
+
     public void Trigger()
     {
         gameObject.SetActive(true);
-        isOn = true;
+        _isOn = true;
     }
-    
+
     public bool GetElectricityState()
-        {
-            return isOn;
-        }
-        
+    {
+        return _isOn;
+    }
 }

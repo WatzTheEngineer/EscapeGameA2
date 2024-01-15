@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PickableObject : MonoBehaviour
 {
+    public static GameObject CarriedObject;
     public Transform player;
     public Transform playerCam;
     public float throwForce = 10;
@@ -10,91 +11,72 @@ public class PickableObject : MonoBehaviour
 
     public bool isPlayerNear;
     public bool isBeingCarried;
-    private bool isTouched;
-
-    public static GameObject carriedObject;
-    private Rigidbody rigidbody;
+    private bool _isTouched;
+    private Rigidbody _rigidbody;
 
     public void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    private void Update()
     {
         CheckPlayerProximity();
 
-        if (isPlayerNear && Input.GetKeyDown(KeyCode.E) && !isBeingCarried && carriedObject == null)
-        {
-            PickObject();
-        }
+        if (isPlayerNear && Input.GetKeyDown(KeyCode.E) && !isBeingCarried && CarriedObject == null) PickObject();
 
-        if (isBeingCarried && carriedObject == gameObject)
-        {
-            HandleCarriedObject();
-        }
+        if (isBeingCarried && CarriedObject == gameObject) HandleCarriedObject();
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (isBeingCarried)
-        {
-            isTouched = true;
-        }
+        if (isBeingCarried) _isTouched = true;
     }
 
     public void CheckPlayerProximity()
     {
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        var distanceToPlayer = Vector3.Distance(transform.position, player.position);
         isPlayerNear = distanceToPlayer < pickDistance;
     }
 
     public void PickObject()
     {
-        rigidbody.isKinematic = true;
+        _rigidbody.isKinematic = true;
         isBeingCarried = true;
-        carriedObject = gameObject;
+        CarriedObject = gameObject;
     }
 
     private void HandleCarriedObject()
     {
-        if (isTouched)
-        {
-            ReleaseObject();
-        }
+        if (_isTouched) ReleaseObject();
 
         if (Input.GetMouseButtonDown(0))
-        {
             ThrowObject();
-        }
-        else if (Input.GetMouseButtonDown(1))
-        {
-            ReleaseObject();
-        }
+        else if (Input.GetMouseButtonDown(1)) ReleaseObject();
 
         UpdateObjectPosition();
     }
 
     private void ReleaseObject()
     {
-        rigidbody.isKinematic = false;
+        _rigidbody.isKinematic = false;
         transform.parent = null;
         isBeingCarried = false;
-        isTouched = false;
-        carriedObject = null;
+        _isTouched = false;
+        CarriedObject = null;
     }
 
     private void ThrowObject()
     {
-        rigidbody.isKinematic = false;
+        _rigidbody.isKinematic = false;
         isBeingCarried = false;
-        carriedObject = null;
-        rigidbody.AddForce(playerCam.forward * throwForce);
+        CarriedObject = null;
+        _rigidbody.AddForce(playerCam.forward * throwForce);
     }
 
     private void UpdateObjectPosition()
     {
-        Vector3 objectPos = playerCam.position + playerCam.forward * 3f;
+        var objectPos = playerCam.position + playerCam.forward * 3f;
         transform.position = objectPos;
         transform.position += Vector3.up * 1.05f;
         transform.rotation = playerCam.rotation;

@@ -64,14 +64,14 @@ namespace Tests
             // Arrange
             _pickableObjectScript.isPlayerNear = true;
             _pickableObjectScript.isBeingCarried = false;
-            PickableObject.carriedObject = null;
+            PickableObject.CarriedObject = null;
 
             // Act
             _pickableObjectScript.PickObject();
 
             // Assert
             Assert.IsTrue(_pickableObjectScript.isBeingCarried);
-            Assert.AreEqual(_pickableObjectGo, PickableObject.carriedObject);
+            Assert.AreEqual(_pickableObjectGo, PickableObject.CarriedObject);
         }
 
         // Ajoutez d'autres tests pour les autres méthodes de la classe PickableObject

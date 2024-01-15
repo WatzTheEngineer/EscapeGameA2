@@ -39,7 +39,7 @@ public class ComputerController : MonoBehaviour
 
     private bool alimentationGetElectricity()
     {
-        return alimentation.GetComponent<TurnElectricitytOn>().GetElectricityState();
+        return alimentation.GetComponent<TurnElectricityOn>().GetElectricityState();
     }
 
     public void WindowsLaunch()
