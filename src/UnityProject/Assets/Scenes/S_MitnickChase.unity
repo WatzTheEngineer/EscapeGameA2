@@ -3527,11 +3527,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2d8ac903cb24ee4ab1f174a382baa3c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -75.67
+      value: -75.647
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2d8ac903cb24ee4ab1f174a382baa3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.57
+      value: 2.575
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2d8ac903cb24ee4ab1f174a382baa3c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3601,9 +3601,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d2d8ac903cb24ee4ab1f174a382baa3c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1182513059}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d2d8ac903cb24ee4ab1f174a382baa3c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1182513063}
   m_SourcePrefab: {fileID: 100100000, guid: d2d8ac903cb24ee4ab1f174a382baa3c, type: 3}
 --- !u!1 &72895462
 GameObject:
@@ -5486,7 +5483,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 1447350895}
 --- !u!114 &119178310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5502,7 +5498,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 119178307}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &119178311
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8607,7 +8606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 2009423044}
 --- !u!114 &198554537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8623,7 +8621,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 198554534}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &198554538
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11484,6 +11485,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257267251}
   m_CullTransparentMesh: 1
+--- !u!1 &258254286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 258254287}
+  - component: {fileID: 258254290}
+  - component: {fileID: 258254289}
+  - component: {fileID: 258254288}
+  m_Layer: 0
+  m_Name: ElectricityState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &258254287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258254286}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.6990778, z: -0, w: 0.7150457}
+  m_LocalPosition: {x: -2.85, y: -0.913, z: 8.954}
+  m_LocalScale: {x: 0.4434619, y: 0.4434619, z: 0.4434619}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1197531059}
+  m_LocalEulerAnglesHint: {x: 0, y: -88.706, z: 0}
+--- !u!114 &258254288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258254286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4c968b2350460f8a7249c78bb44cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &258254289
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258254286}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f9ff369e37769e84aaf5fae0ddce95e5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &258254290
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258254286}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &258334202
 GameObject:
   m_ObjectHideFlags: 0
@@ -12919,7 +13016,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 712044789}
 --- !u!114 &275318121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12935,7 +13031,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 275318118}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &275318122
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13327,7 +13426,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 1483039528}
 --- !u!114 &281141029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13343,7 +13441,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 281141026}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &281141030
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15945,7 +16046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 663666695}
 --- !u!114 &335687502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15961,7 +16061,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 335687499}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &335687503
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18258,7 +18361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 29189570}
 --- !u!114 &378973743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18274,7 +18376,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 378973740}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &378973744
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -26337,7 +26442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 1221623172}
 --- !u!114 &540228825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26353,7 +26457,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 540228822}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &540228826
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -26951,7 +27058,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 125685525}
 --- !u!114 &560055793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26967,7 +27073,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 560055790}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &560055794
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -27538,7 +27647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 661701920}
 --- !u!114 &580521906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27554,7 +27662,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 580521903}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &580521907
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -29135,7 +29246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextObject: {fileID: 1197531058}
   triggeredObjects:
-  - {fileID: 1182513046}
+  - {fileID: 1462669171}
 --- !u!1 &622924548
 GameObject:
   m_ObjectHideFlags: 0
@@ -33691,7 +33802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 1910172764}
 --- !u!114 &739842936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33707,7 +33817,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 739842933}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &739842937
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -35038,7 +35151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 801805061}
 --- !u!114 &765823235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35054,7 +35166,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 765823232}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &765823236
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40519,12 +40634,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877709612}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -74.65, y: 1.32, z: -11.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4580154, y: -0.22951508, z: 0.6140909}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1197531059}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &879782748
 GameObject:
@@ -44767,7 +44882,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 1632718529}
 --- !u!114 &972165811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44783,7 +44897,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 972165808}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &972165812
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -47513,6 +47630,7 @@ MonoBehaviour:
   - {fileID: 1190481758}
   - {fileID: 38832255}
   - {fileID: 482096601}
+  - {fileID: 258254286}
 --- !u!1 &1014164988
 GameObject:
   m_ObjectHideFlags: 0
@@ -50011,7 +50129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 552885550}
 --- !u!114 &1056511750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50027,7 +50144,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 1056511747}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &1056511751
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56566,7 +56686,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182513046}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e6aed5db9bbdb7418db0c82985ef0c4, type: 3}
   m_Name: 
@@ -56574,19 +56694,9 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 1182513046}
-  plugHeadConttroller: {fileID: 0}
---- !u!114 &1182513063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182513046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  wire: {fileID: 1462669171}
+  alimentation: {fileID: 258254286}
+  pcCouldBeTurnedOn: 0
   screen: {fileID: 1122818586}
 --- !u!4 &1182513066 stripped
 Transform:
@@ -57620,6 +57730,8 @@ Transform:
   - {fileID: 180851340}
   - {fileID: 607046224}
   - {fileID: 1462669172}
+  - {fileID: 258254287}
+  - {fileID: 877709615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1197531060
@@ -63028,7 +63140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 1255847067}
 --- !u!114 &1302551832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63044,7 +63155,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 1302551829}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &1302551833
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70580,9 +70694,9 @@ GameObject:
   - component: {fileID: 1462669172}
   - component: {fileID: 1462669175}
   - component: {fileID: 1462669174}
-  - component: {fileID: 1462669173}
+  - component: {fileID: 1462669176}
   m_Layer: 0
-  m_Name: Cube (31)
+  m_Name: WireState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70603,27 +70717,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1197531059}
   m_LocalEulerAnglesHint: {x: 0, y: -88.706, z: 0}
---- !u!65 &1462669173
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1462669171}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1462669174
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -70674,6 +70767,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462669171}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1462669176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462669171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1462736630
 GameObject:
   m_ObjectHideFlags: 0
@@ -74574,7 +74679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 1755599655}
 --- !u!114 &1556684505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74590,7 +74694,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 1556684502}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &1556684506
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80053,7 +80160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 1105795697}
 --- !u!114 &1669943532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80069,7 +80175,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 1669943529}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &1669943533
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -81175,7 +81284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 2040871911}
 --- !u!114 &1680248024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81191,7 +81299,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 1680248021}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &1680248025
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -93145,7 +93256,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 1473752075}
 --- !u!114 &1911662383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93161,7 +93271,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 1911662380}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &1911662384
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -99561,7 +99674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 604310123}
 --- !u!114 &2015362135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99577,7 +99689,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 2015362132}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &2015362136
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -100403,7 +100518,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 91622549}
 --- !u!114 &2031486029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100419,7 +100533,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 2031486026}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &2031486030
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -100957,7 +101074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 383089879}
 --- !u!114 &2035342065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100973,7 +101089,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 2035342062}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &2035342066
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -101605,7 +101724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 178944984}
 --- !u!114 &2046853034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101621,7 +101739,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 2046853031}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &2046853035
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -101938,7 +102059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 1823767091}
 --- !u!114 &2051430595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101954,7 +102074,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 2051430592}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &2051430596
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -104943,7 +105066,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5811537e438889b4997afc7c729e9372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screen: {fileID: 1968861759}
 --- !u!114 &2112021726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104959,7 +105081,10 @@ MonoBehaviour:
   isVisible: 0
   pauseMenuUI: {fileID: 1277405091}
   computer: {fileID: 2112021723}
-  plugHeadConttroller: {fileID: 0}
+  wire: {fileID: 0}
+  alimentation: {fileID: 0}
+  pcCouldBeTurnedOn: 0
+  screen: {fileID: 0}
 --- !u!64 &2112021727
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -106795,7 +106920,6 @@ SceneRoots:
   - {fileID: 1277405095}
   - {fileID: 615044947}
   - {fileID: 1197531059}
-  - {fileID: 877709615}
   - {fileID: 314312718}
   - {fileID: 1032838347}
   - {fileID: 991602855}

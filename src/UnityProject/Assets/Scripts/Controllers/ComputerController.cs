@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -13,16 +14,38 @@ public class ComputerController : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject computer;
     ComputerController ComputerControllerScript;
-    public PlugHeadConttroller plugHeadConttroller;
-    
+    public GameObject wire;
+    public GameObject alimentation;
+    public bool pcCouldBeTurnedOn = false;
+    [SerializeField] public GameObject screen;
 
+    public void Update()
+    {
+        if(alimentationGetElectricity() && wireIsPlugged())
+        {
+            pcCouldBeTurnedOn = true;
+            screen.SetActive(true);
+        }
+        else
+        {
+            pcCouldBeTurnedOn = false;
+        }
+    }
+
+    private bool wireIsPlugged()
+    {
+        return wire.GetComponent<PlugHeadConttroller>().GetHeadPlugState();
+    }
+
+    private bool alimentationGetElectricity()
+    {
+        return alimentation.GetComponent<TurnElectricitytOn>().GetElectricityState();
+    }
 
     public void WindowsLaunch()
     {
-        plugHeadConttroller = computer.GetComponent<PlugHeadConttroller>();
         
-
-        if (plugHeadConttroller.GetHeadPlugState())
+        if (pcCouldBeTurnedOn)
         {
             
             paused = togglePause();

@@ -5,18 +5,16 @@ using UnityEngine;
 
 public class PlugHeadConttroller : MonoBehaviour, ITriggerable
 {
-    public GameObject screen;
-    private bool headIsPlugged = false;
+    private bool isPlugged = false;
 
     public void Trigger()
     {
-        headIsPlugged = !headIsPlugged;
-        screen.gameObject.SetActive(true);
+        isPlugged = !isPlugged;
     }
     
     public bool GetHeadPlugState()
     {
-        return headIsPlugged;
+        return isPlugged;
     }   
 }
 
