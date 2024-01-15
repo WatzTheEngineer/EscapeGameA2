@@ -109,3 +109,13 @@
     > Travaille sur l'amélioration de l'UI/UX des menus
 - Willem
     > Travaille à l'amélioration de l'inventaire et la création d'un tutoriel
+
+## 15/01/2024
+- Logan
+    > Travaille sur la création de la dernière énigme
+- Louis
+    > Travaille sur la qualité du code et l'élaboration de tests
+- Thomas
+    > Travaille sur la création de nouveaux menus
+- Willem
+    > Travaille sur la création de la dernière énigme
