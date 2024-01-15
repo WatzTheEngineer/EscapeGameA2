@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class InventoryContextMenu : MonoBehaviour
 {
       private Inventory inventory;
-      [SerializeField] private Button buttonDrop,buttonEquip,buttonConsume,buttonUse, buttonClose;
+      [SerializeField] private Button buttonEquip,buttonConsume,buttonUse, buttonClose;
       private int targetSlotID;
 
       public void Awake()
       {
-          buttonDrop.onClick.AddListener(drop); 
+          //buttonDrop.onClick.AddListener(drop); 
           buttonUse.onClick.AddListener(use);
           buttonEquip.onClick.AddListener(equip);
           buttonConsume.onClick.AddListener(consume);
