@@ -6,80 +6,99 @@ public class PickableObject : MonoBehaviour
     public Transform playerCam;
     public float throwForce = 10;
 
-    private bool _hasPlayer;
-    private bool _beingCarried;
-    private bool _touched;
+    [SerializeField] public float pickDistance;
 
-    
+    public bool isPlayerNear;
+    public bool isBeingCarried;
+    private bool isTouched;
 
-    [SerializeField] private float pickDistance;
+    public static GameObject carriedObject;
+    private Rigidbody rigidbody;
 
-    private static GameObject _carriedObject; // Objet actuellement porté
-    private Rigidbody _rigidbody;
-
-    private void Start()
+    public void Start()
     {
-        _rigidbody = GetComponent<Rigidbody>();
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-        float dist = Vector3.Distance(gameObject.transform.position, player.position);
+        CheckPlayerProximity();
 
-        _hasPlayer = dist < pickDistance;
-
-        if (_hasPlayer && Input.GetKeyDown(KeyCode.E) && !_beingCarried && _carriedObject == null) // Vérifier si aucun objet n'est déjà porté
+        if (isPlayerNear && Input.GetKeyDown(KeyCode.E) && !isBeingCarried && carriedObject == null)
         {
-            _rigidbody.isKinematic = true;
-            _beingCarried = true;
-            _carriedObject = gameObject; // Mettre à jour l'objet actuellement porté
+            PickObject();
         }
 
-        if (_beingCarried && _carriedObject == gameObject) // Vérifier si l'objet actuellement porté est celui-ci
+        if (isBeingCarried && carriedObject == gameObject)
         {
-            if (_touched)
-            {
-                _rigidbody.isKinematic = false;
-                transform.parent = null;
-                _beingCarried = false;
-                _touched = false;
-                _carriedObject = null; // Réinitialiser l'objet actuellement porté
-            }
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                _rigidbody.isKinematic = false;
-                _beingCarried = false;
-                _carriedObject = null; // Réinitialiser l'objet actuellement porté
-                _rigidbody.AddForce(playerCam.forward * throwForce);
-            }
-            else if (Input.GetMouseButtonDown(1))
-            {
-                _rigidbody.isKinematic = false;
-                _beingCarried = false;
-                _carriedObject = null; // Réinitialiser l'objet actuellement porté
-            }
-
-            Vector3 objectPos = playerCam.position + playerCam.forward * 3f; // Ajuste la distance entre l'objet et la caméra du joueur
-            transform.position = objectPos;
-            transform.position += Vector3.up * 1.05f;
-            transform.rotation = playerCam.rotation ;
-            transform.rotation *= Quaternion.Euler(-15f, 45f, -15f);
-            transform.position -= new Vector3(0, 0.5f, 0);
-
-
-
-
-
+            HandleCarriedObject();
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (_beingCarried)
+        if (isBeingCarried)
         {
-            _touched = true;
+            isTouched = true;
         }
     }
 
+    public void CheckPlayerProximity()
+    {
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        isPlayerNear = distanceToPlayer < pickDistance;
+    }
+
+    public void PickObject()
+    {
+        rigidbody.isKinematic = true;
+        isBeingCarried = true;
+        carriedObject = gameObject;
+    }
+
+    private void HandleCarriedObject()
+    {
+        if (isTouched)
+        {
+            ReleaseObject();
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            ThrowObject();
+        }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            ReleaseObject();
+        }
+
+        UpdateObjectPosition();
+    }
+
+    private void ReleaseObject()
+    {
+        rigidbody.isKinematic = false;
+        transform.parent = null;
+        isBeingCarried = false;
+        isTouched = false;
+        carriedObject = null;
+    }
+
+    private void ThrowObject()
+    {
+        rigidbody.isKinematic = false;
+        isBeingCarried = false;
+        carriedObject = null;
+        rigidbody.AddForce(playerCam.forward * throwForce);
+    }
+
+    private void UpdateObjectPosition()
+    {
+        Vector3 objectPos = playerCam.position + playerCam.forward * 3f;
+        transform.position = objectPos;
+        transform.position += Vector3.up * 1.05f;
+        transform.rotation = playerCam.rotation;
+        transform.rotation *= Quaternion.Euler(-15f, 45f, -15f);
+        transform.position -= new Vector3(0, 0.5f, 0);
+    }
 }
