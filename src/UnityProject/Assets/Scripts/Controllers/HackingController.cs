@@ -46,6 +46,7 @@ public class HackingController : MonoBehaviour
     public void launchProgressBar()
     {
         
+        
         progressBar = new List<GameObject>
         {
             part1,
@@ -64,8 +65,11 @@ public class HackingController : MonoBehaviour
     }
     IEnumerator ProgressBarCoroutine()
     {
+        Debug.Log("zzetrtz");
+        Debug.Log(progressBar.Count);
         foreach (GameObject part in progressBar)
         {
+            Debug.Log("zzetrtzezazezrfzerfzesrftze");
 
             part.SetActive(true);
             yield return new WaitForSeconds(time);

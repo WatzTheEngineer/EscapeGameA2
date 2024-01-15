@@ -29,7 +29,7 @@ namespace inventoryGestion
         
         void ifICapPressedOpenInventory()
         {
-            if (Input.GetKeyDown(KeyCode.I))
+            if (Input.GetKeyDown(KeyCode.Tab))
             {
                 isVisible = !isVisible;
                 panel.SetActive(isVisible);
