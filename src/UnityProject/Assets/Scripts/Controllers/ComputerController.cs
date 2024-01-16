@@ -11,6 +11,7 @@ public class ComputerController : MonoBehaviour
     bool paused = false;
     bool isRunning = false;
     public bool isVisible = true;
+    public bool haveInternet = false;
     public GameObject pauseMenuUI;
     public GameObject computer;
     ComputerController ComputerControllerScript;
@@ -21,6 +22,7 @@ public class ComputerController : MonoBehaviour
 
     public void Update()
     {
+        
         if(alimentationGetElectricity() && wireIsPlugged())
         {
             pcCouldBeTurnedOn = true;
@@ -91,5 +93,10 @@ public class ComputerController : MonoBehaviour
             Time.timeScale = 0f;
             return (true);
         }
+    }
+
+    public void swirchInternet()
+    {
+        haveInternet = true;
     }
 }
