@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4529.6436, g: 2940.8142, b: 2266.1357, a: 1}
+  m_IndirectSpecularColor: {r: 4533.177, g: 2941.5422, b: 2263.0115, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1329,7 +1329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 165}
+  m_AnchoredPosition: {x: 0, y: 175}
   m_SizeDelta: {x: 1680.2168, y: 585.5811}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425489578
@@ -1366,7 +1366,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Vous vous \xEAtes inscrit pour faire partie l' unit\xE9 d'\xE9lite d'informaticiens
-    'Hope',qui sur le point d'embarquer pour la lune de Jupiter Io. Cette organisation
+    'Hope', qui est  sur le point d'embarquer pour la lune de Jupiter IO. Cette organisation
     internationale recrute sur la base d'un nouveau test interactif vous faisant
     prendre part \xE0 l'histoire de l'informatique. Saurez-vous d\xE9crocher votre
     place en reproduisant les faits et gestes des grands g\xE9nies de ce domaine
