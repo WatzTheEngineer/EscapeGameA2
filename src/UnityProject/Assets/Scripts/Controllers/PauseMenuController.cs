@@ -57,7 +57,7 @@ public class PauseMenuController : MonoBehaviour
 
     public void quitButton()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
     bool togglePause()
     {
