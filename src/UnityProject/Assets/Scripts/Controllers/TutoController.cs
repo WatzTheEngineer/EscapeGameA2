@@ -14,6 +14,7 @@ namespace Controllers
         [SerializeField] public GameObject tabPanel;
         [SerializeField] public CanvasGroup canvasGroup;
         [SerializeField] public float waitTimeBetweenFade;
+        [SerializeField] private GameObject MitnickUI;
 
         private bool _isClickActive;
         private bool _isEActive;
@@ -74,6 +75,7 @@ namespace Controllers
             {
                 StartCoroutine(FadeOutPanel(tabPanel));
                 _isTabActive = false;
+                MitnickUI.SetActive(true);
             }
         }
 
