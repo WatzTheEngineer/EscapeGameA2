@@ -1,6 +1,7 @@
 using UnityEngine;
+using Utils;
 
-public class PickableObject : MonoBehaviour
+public class PickableObject : MonoBehaviour, IRaycastable
 {
     public static GameObject CarriedObject;
     public Transform player;
@@ -19,12 +20,8 @@ public class PickableObject : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    public void Update()
     {
-        CheckPlayerProximity();
-
-        if (isPlayerNear && Input.GetKeyDown(KeyCode.E) && !isBeingCarried && CarriedObject == null) PickObject();
-
         if (isBeingCarried && CarriedObject == gameObject) HandleCarriedObject();
     }
 
@@ -33,10 +30,9 @@ public class PickableObject : MonoBehaviour
         if (isBeingCarried) _isTouched = true;
     }
 
-    public void CheckPlayerProximity()
+    public void PlayAnimation()
     {
-        var distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        isPlayerNear = distanceToPlayer < pickDistance;
+        if (!isBeingCarried && CarriedObject == null) PickObject();
     }
 
     public void PickObject()

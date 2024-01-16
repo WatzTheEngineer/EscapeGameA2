@@ -31,34 +31,6 @@ namespace Tests
         private PickableObject _pickableObjectScript;
 
         [Test]
-        public void CheckPlayerProximity_PlayerNear_ReturnsTrue()
-        {
-            // Arrange
-            _pickableObjectScript.player.position = Vector3.zero;
-            _pickableObjectGo.transform.position = Vector3.zero;
-
-            // Act
-            _pickableObjectScript.CheckPlayerProximity();
-
-            // Assert
-            Assert.IsTrue(_pickableObjectScript.isPlayerNear);
-        }
-
-        [Test]
-        public void CheckPlayerProximity_PlayerFar_ReturnsFalse()
-        {
-            // Arrange
-            _pickableObjectScript.player.position = Vector3.zero;
-            _pickableObjectGo.transform.position = new Vector3(5f, 0f, 0f);
-
-            // Act
-            _pickableObjectScript.CheckPlayerProximity();
-
-            // Assert
-            Assert.IsFalse(_pickableObjectScript.isPlayerNear);
-        }
-
-        [Test]
         public void PickObject_PlayerNearAndNotCarriedAndNoOtherCarriedObject_CarriesObject()
         {
             // Arrange
