@@ -6,6 +6,7 @@ namespace DefaultNamespace
     {
         public GameObject diskette;
         InsertDisquetteTrigger script;
+        public GameObject exitDoor;
 
         private Inventory inventory;
         [SerializeField] private GameObject disquette;
@@ -18,7 +19,7 @@ namespace DefaultNamespace
             gameObject.SetActive(false);
             inventory = FindObjectOfType<Inventory>();
             inventory.AddItem(ActionItem);
-
+            exitDoor.SetActive(true);
         }
 }
 }
