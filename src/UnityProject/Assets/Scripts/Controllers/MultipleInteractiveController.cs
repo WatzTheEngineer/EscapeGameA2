@@ -5,7 +5,7 @@ using DefaultNamespace;
 using UnityEngine;
 using Utils;
 
-public class MultipleInteractiveController : MonoBehaviour,Raycastable
+public class MultipleInteractiveController : MonoBehaviour,IRaycastable
 {
     [SerializeField] private GameObject nextObject;
     private Animator objectAnimation;
@@ -22,7 +22,7 @@ public class MultipleInteractiveController : MonoBehaviour,Raycastable
         if (!isOpen)
         {
             objectAnimation.Play("OPEN",0,0.0f);
-            nextObject.GetComponent<Raycastable>().PlayAnimation();
+            nextObject.GetComponent<IRaycastable>().PlayAnimation();
             isOpen = true;
             foreach (var obj in triggeredObjects)
             {

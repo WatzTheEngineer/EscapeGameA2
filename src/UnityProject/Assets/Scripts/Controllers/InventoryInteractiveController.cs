@@ -3,7 +3,7 @@ using inventoryGestion;
 using UnityEngine;
 using Utils;
 
-    public class InventoryInteractiveController: MonoBehaviour,Raycastable
+    public class InventoryInteractiveController: MonoBehaviour,IRaycastable
     {
         private GameObject _gameObject;
         [SerializeField] private Item _item;

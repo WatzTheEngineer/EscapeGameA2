@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Tests
 {
     [TestFixture]
-    public class TurnElectricityOnTests
+    public class TurnElectricityOnTests // Vaste fumisterie
     {
         [SetUp]
         public void SetUp()
@@ -43,7 +43,5 @@ namespace Tests
             // Assert
             Assert.IsTrue(_electricityScript.GetElectricityState());
         }
-
-        // Ajoutez d'autres tests pour les autres méthodes ou comportements de la classe TurnElectricityOn
     }
 }

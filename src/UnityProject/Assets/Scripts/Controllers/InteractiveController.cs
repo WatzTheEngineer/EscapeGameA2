@@ -5,7 +5,7 @@ using DefaultNamespace;
 using UnityEngine;
 using Utils;
 
-public class InteractiveController : MonoBehaviour,Raycastable
+public class InteractiveController : MonoBehaviour,IRaycastable
 {
     private Animator objectAnimation;
     private bool isOpen = false;
