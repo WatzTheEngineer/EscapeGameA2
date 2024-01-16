@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class HackingController : MonoBehaviour
 {
@@ -16,7 +18,13 @@ public class HackingController : MonoBehaviour
     public GameObject part8;
     public GameObject part9;
     public GameObject part10;
-    public float time;
+    public GameObject sucess;
+    private float time;
+    public GameObject hackMenu;
+    public GameObject hackdisketteMenu;
+
+    public float timeInterval;
+
     private List<GameObject> progressBar;
     // Start is called before the first frame update
     void Start()
@@ -35,6 +43,8 @@ public class HackingController : MonoBehaviour
             part10
         };
 
+        StartCoroutine(LaucnhHacking());
+
     }
 
     // Update is called once per frame
@@ -43,10 +53,8 @@ public class HackingController : MonoBehaviour
         
     }
 
-    public void launchProgressBar()
+    IEnumerator LaucnhHacking()
     {
-        
-        
         progressBar = new List<GameObject>
         {
             part1,
@@ -60,24 +68,31 @@ public class HackingController : MonoBehaviour
             part9,
             part10
         };
-        StartCoroutine(ProgressBarCoroutine());
-        
-    }
-    IEnumerator ProgressBarCoroutine()
-    {
-        Debug.Log("zzetrtz");
-        Debug.Log(progressBar.Count);
+        Time.timeScale = 025f;
         foreach (GameObject part in progressBar)
         {
-            Debug.Log("zzetrtzezazezrfzerfzesrftze");
+            
 
             part.SetActive(true);
             yield return new WaitForSeconds(time);
             part.SetActive(false);
-
+            
         }
+        Time.timeScale = 1f;
         part10.SetActive(true);
+        sucess.SetActive(true);
+        hackMenu.SetActive(false);   
+        hackdisketteMenu.SetActive(true);
+
+
     }
 
     
-}
+
+    }
+
+    
+
+   
+
+ 

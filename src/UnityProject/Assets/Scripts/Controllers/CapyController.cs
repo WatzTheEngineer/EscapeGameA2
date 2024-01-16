@@ -30,6 +30,7 @@ public class RouterController : MonoBehaviour
     public GameObject screen22;
     public GameObject screen23;
     public GameObject screen24;
+    public GameObject parkFloor;
     private List<GameObject> screens = new List<GameObject>();
     
     // Start is called before the first frame update
@@ -67,19 +68,29 @@ public class RouterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canMove && transform.position.z < 38f) 
+        if (canMove && parkFloor.transform.position.z < 38f) 
         {
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            parkFloor.transform.Translate(Vector3.forward * Time.deltaTime * speed);
             foreach(GameObject go in screens)
             {
                 go.SetActive(true);
             }
+        }
+        else
+        {
+            parkFloor.transform.Translate(-Vector3.forward * Time.deltaTime * speed);
+            foreach (GameObject go in screens)
+            {
+                go.SetActive(false);
+            }
+
         }
         
     }
 
     public void capy()
     {
-        canMove = true;
+        canMove = !canMove;
+        
     }
 }
