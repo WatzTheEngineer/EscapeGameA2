@@ -13,6 +13,7 @@ namespace Utils
         private const string Tag = "InteractiveObject";
         private const string Tag2 = "InteractiveComputer";
         private const string Tag3 = "InteractiveDoor";
+        private const string TextTag = "TextTag";
         [SerializeField] private int rayLength;
         [SerializeField] private LayerMask layerMaskInterract;
         [SerializeField] private string exculdeLayerName;
@@ -36,6 +37,10 @@ namespace Utils
                     crossAir.GetComponent<CanvasScaler>().scaleFactor = 2.5f;
 
                     if (Input.GetKeyDown(openKey)) _raycastedInteractive.OnRaycastDo();
+                }
+                else if (hit.collider.CompareTag(TextTag))
+                {
+                    if (Input.GetKeyDown(openKey)) hit.collider.gameObject.GetComponent<TextOnInterract>().Send();
                 }
 
             RaycastHit hit2;
@@ -68,9 +73,7 @@ namespace Utils
 
             if (Physics.Raycast(transform.position, fwd, out hit, rayLength, mask))
                 if (!hit.collider.CompareTag(Tag) && !hit.collider.CompareTag(Tag2) && !hit.collider.CompareTag(Tag3))
-                {
                     crossAir.GetComponent<CanvasScaler>().scaleFactor = 1f;
-                }
 
             // ===================================================================
             //         TODO: CODE HORRIBLE ! DOIT ABSOLUMENT ETRE REVU !
