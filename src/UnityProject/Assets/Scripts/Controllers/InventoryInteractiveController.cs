@@ -17,7 +17,7 @@ using Utils;
             _inventory = FindObjectOfType<Inventory>();
         }
         
-        public void PlayAnimation()
+        public void OnRaycastDo()
         {
             if (!isOpen)
             {

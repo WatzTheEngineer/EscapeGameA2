@@ -5,7 +5,7 @@ namespace Utils
 {
     public interface IRaycastable
     {
-        void PlayAnimation();
+        void OnRaycastDo();
     }
 
     public class Raycast : MonoBehaviour
@@ -35,7 +35,7 @@ namespace Utils
                     _raycastedInteractive = hit.collider.gameObject.GetComponent<IRaycastable>();
                     crossAir.GetComponent<CanvasScaler>().scaleFactor = 2.5f;
 
-                    if (Input.GetKeyDown(openKey)) _raycastedInteractive.PlayAnimation();
+                    if (Input.GetKeyDown(openKey)) _raycastedInteractive.OnRaycastDo();
                 }
 
             RaycastHit hit2;

@@ -30,7 +30,7 @@ public class PickableObject : MonoBehaviour, IRaycastable
         if (isBeingCarried) _isTouched = true;
     }
 
-    public void PlayAnimation()
+    public void OnRaycastDo()
     {
         if (!isBeingCarried && CarriedObject == null) PickObject();
     }

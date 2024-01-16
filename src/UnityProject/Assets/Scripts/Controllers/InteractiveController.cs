@@ -17,7 +17,7 @@ public class InteractiveController : MonoBehaviour,IRaycastable
         objectAnimation = gameObject.GetComponent<Animator>();
     }
 
-    public void PlayAnimation()
+    public void OnRaycastDo()
     {
         if (!isOpen)
         {

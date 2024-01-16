@@ -17,12 +17,12 @@ public class MultipleInteractiveController : MonoBehaviour,IRaycastable
         objectAnimation = gameObject.GetComponent<Animator>();
     }
 
-    public void PlayAnimation()
+    public void OnRaycastDo()
     {
         if (!isOpen)
         {
             objectAnimation.Play("OPEN",0,0.0f);
-            nextObject.GetComponent<IRaycastable>().PlayAnimation();
+            nextObject.GetComponent<IRaycastable>().OnRaycastDo();
             isOpen = true;
             foreach (var obj in triggeredObjects)
             {

@@ -70,7 +70,7 @@ public class lockPickingController : MonoBehaviour
         {
             
             doorAnimationScript = door.GetComponent<InteractiveController>();
-            doorAnimationScript.PlayAnimation();
+            doorAnimationScript.OnRaycastDo();
             returnButton();
         }
 
