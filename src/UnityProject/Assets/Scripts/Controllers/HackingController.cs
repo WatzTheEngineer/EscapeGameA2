@@ -72,16 +72,14 @@ public class HackingController : MonoBehaviour
         foreach (GameObject part in progressBar)
         {
             
-
             part.SetActive(true);
             yield return new WaitForSeconds(time);
-            part.SetActive(false);
-            
+            part.SetActive(false); 
         }
         Time.timeScale = 1f;
         part10.SetActive(true);
         sucess.SetActive(true);
-        hackMenu.SetActive(false);   
+        
         hackdisketteMenu.SetActive(true);
 
 

@@ -59,7 +59,7 @@ public class PauseMenuController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
-    bool togglePause()
+    public bool togglePause()
     {
         if (Time.timeScale == 0f)
         {
@@ -70,6 +70,22 @@ public class PauseMenuController : MonoBehaviour
         {
             Time.timeScale = 0f;
             return (true);
+        }
+
+
+    }
+
+    public void togglePauseVoid()
+    {
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+            
+        }
+        else
+        {
+            Time.timeScale = 0f;
+            
         }
     }
 }
