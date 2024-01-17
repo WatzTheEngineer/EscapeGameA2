@@ -11,6 +11,5 @@ public class TextOnInterract : MonoBehaviour
     public void Send()
     {
         UI.GetComponent<MitnickUIController>().ShowText(textToSend);
-        print("sended text : " + textToSend);
     }
 }

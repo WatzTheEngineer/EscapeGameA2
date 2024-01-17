@@ -1,22 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class endMitnickChaseTrigger : MonoBehaviour, ITriggerable
 {
-    public bool isVisible = false;
+    public bool isVisible;
 
-    [SerializeField] GameObject endUi;
+    [SerializeField] private GameObject endUi;
+    [SerializeField] private GameObject MitnickUI;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         gameObject.SetActive(false);
     }
 
     public void Trigger()
     {
+        MitnickUI.SetActive(false);
         isVisible = !isVisible;
         Debug.Log("Trigger");
         endUi.SetActive(true);
@@ -30,13 +29,10 @@ public class endMitnickChaseTrigger : MonoBehaviour, ITriggerable
         if (Time.timeScale == 0f)
         {
             Time.timeScale = 1f;
-            return (false);
-        }
-        else
-        {
-            Time.timeScale = 0f;
-            return (true);
+            return false;
         }
 
+        Time.timeScale = 0f;
+        return true;
     }
 }

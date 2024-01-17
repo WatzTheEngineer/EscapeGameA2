@@ -54,7 +54,7 @@ namespace Controllers
 
         public void ShowText(string textToSend)
         {
-            if (!isInWork)
+            if (!isInWork && gameObject.activeSelf)
             {
                 isInWork = true;
                 _nextText = textToSend;
