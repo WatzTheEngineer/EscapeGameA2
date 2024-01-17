@@ -10,10 +10,12 @@ namespace Controllers
         [SerializeField] private GameObject basePanel;
         private GameObject _loadingPanel;
         private string _nextText;
+        private bool isInWork;
 
         private void Start()
         {
             _loadingPanel = basePanel;
+            isInWork = false;
         }
 
         private IEnumerator ReloadText()
@@ -26,6 +28,8 @@ namespace Controllers
             tmp.text = _nextText;
             yield return StartCoroutine(FadeInPanel(_loadingPanel, .25f));
             yield return StartCoroutine(FadeOutPanel(_loadingPanel));
+            yield return new WaitForSeconds(0.25f);
+            isInWork = false;
         }
 
         public IEnumerator FadeOutPanel(GameObject panel)
@@ -50,8 +54,12 @@ namespace Controllers
 
         public void ShowText(string textToSend)
         {
-            _nextText = textToSend;
-            StartCoroutine(ReloadText());
+            if (!isInWork)
+            {
+                isInWork = true;
+                _nextText = textToSend;
+                StartCoroutine(ReloadText());
+            }
         }
     }
 }
