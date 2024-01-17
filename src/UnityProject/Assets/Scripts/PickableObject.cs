@@ -74,7 +74,7 @@ public class PickableObject : MonoBehaviour, IRaycastable
     {
         var objectPos = playerCam.position + playerCam.forward * 3f;
         transform.position = objectPos;
-        transform.position += Vector3.up * 1.05f;
+        transform.position += Vector3.up * 1.30f;
         transform.rotation = playerCam.rotation;
         transform.rotation *= Quaternion.Euler(-15f, 45f, -15f);
         transform.position -= new Vector3(0, 0.5f, 0);

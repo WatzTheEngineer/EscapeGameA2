@@ -18,6 +18,7 @@ public class ComputerController : MonoBehaviour
     public GameObject wire;
     public GameObject alimentation;
     public bool pcCouldBeTurnedOn = false;
+    
     [SerializeField] public GameObject screen;
 
     public void Update()
@@ -99,4 +100,5 @@ public class ComputerController : MonoBehaviour
     {
         haveInternet = true;
     }
+    
 }
