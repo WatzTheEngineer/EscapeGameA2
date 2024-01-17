@@ -9,6 +9,8 @@ namespace inventoryGestion
         public GameObject panel;
         public bool isVisible = false;
         private Inventory inventory;
+        FPSController script;
+        public GameObject monObj;
 
         private void Start()
         {
@@ -31,11 +33,23 @@ namespace inventoryGestion
         {
             if (Input.GetKeyDown(KeyCode.Tab))
             {
+                script = monObj.GetComponent<FPSController>();
+                
                 isVisible = !isVisible;
+                
                 panel.SetActive(isVisible);
 
                 Cursor.visible = isVisible;
                 Cursor.lockState = isVisible ? CursorLockMode.None : CursorLockMode.Locked;
+
+                if (isVisible)
+                {
+                    script.enabled = false;
+                }
+                else
+                {
+                    script.enabled = true;
+                }
             }
         }
         
