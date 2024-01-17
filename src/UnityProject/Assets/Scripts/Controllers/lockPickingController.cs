@@ -21,17 +21,22 @@ public class lockPickingController : MonoBehaviour
     FPSController script;
     public GameObject door;
     private InteractiveController doorAnimationScript;
+    private bool isOpen = false;
 
     // Start is called before the first frame update
    
     public void launchLockPicking()
     {
-        gameObject.SetActive(true);
-        TogglePauseMenu();
-        togglePause();
-        isPaused = !isPaused;
-        script = monObj.GetComponent<FPSController>();
-        script.enabled = false;
+        if (!isOpen)
+        {
+            gameObject.SetActive(true);
+            TogglePauseMenu();
+            togglePause();
+            isPaused = !isPaused;
+            script = monObj.GetComponent<FPSController>();
+            script.enabled = false;
+        }
+        
     }
 
     // Update is called once per frame
@@ -68,7 +73,7 @@ public class lockPickingController : MonoBehaviour
 
         if (latch1.value.Equals(1) && latch2.value.Equals(1) && latch3.value.Equals(1) && latch4.value.Equals(1) && latch5.value.Equals(1))
         {
-            
+            isOpen = true;
             doorAnimationScript = door.GetComponent<InteractiveController>();
             doorAnimationScript.OnRaycastDo();
             returnButton();
