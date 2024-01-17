@@ -6,8 +6,10 @@ namespace DefaultNamespace
     public class InsertDisquetteTrigger: MonoBehaviour, ITriggerable
     {
         public bool isInserted = false;
+        public GameObject postit;
         private Inventory inventory;
-        [SerializeField] private Item ActionItem;
+        [SerializeField] private Item[] ActionItems;
+        
         public void Start()
         {
             isInserted = false;
@@ -20,9 +22,14 @@ namespace DefaultNamespace
                 isInserted = !isInserted;
             Debug.Log("Trigger" + isInserted);
                 gameObject.SetActive(true);
+                postit.SetActive(true);
                 gameObject.GetComponent<Animator>().Play("OPEN",0,0.0f);
                 inventory = FindObjectOfType<Inventory>();
-                inventory.PickItem(ActionItem);
+            foreach (Item item in ActionItems)
+            {
+                inventory.PickItem(item);
+            }
+                
 
         }
     
