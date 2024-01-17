@@ -6,6 +6,14 @@ TagManager:
   tags:
   - Basket
   - FakeWall
+  - ObjetRamassable
+  - Pickable
+  - EXPLOSION
+  - InteractiveObject
+  - InteractiveComputer
+  - interactiveCrate
+  - InteractiveDoor
+  - TextTag
   layers:
   - Default
   - TransparentFX

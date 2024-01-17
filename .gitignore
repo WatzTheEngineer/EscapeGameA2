@@ -80,3 +80,5 @@ src/UnityProject/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 src/UnityProject/[Aa]ssets/[Ss]treamingAssets/aa.meta
 src/UnityProject/[Aa]ssets/[Ss]treamingAssets/aa/*
 src/UnityProject/.idea/
+
+tools/tracking/reposense-report/
