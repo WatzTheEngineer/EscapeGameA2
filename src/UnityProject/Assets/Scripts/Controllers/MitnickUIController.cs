@@ -25,6 +25,7 @@ namespace Controllers
             var tmp = _loadingPanel.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
             tmp.text = _nextText;
             yield return StartCoroutine(FadeInPanel(_loadingPanel, .25f));
+            yield return StartCoroutine(FadeOutPanel(_loadingPanel));
         }
 
         public IEnumerator FadeOutPanel(GameObject panel)
