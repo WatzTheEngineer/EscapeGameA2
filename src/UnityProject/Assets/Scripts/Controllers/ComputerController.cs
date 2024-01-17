@@ -18,7 +18,10 @@ public class ComputerController : MonoBehaviour
     public GameObject wire;
     public GameObject alimentation;
     public bool pcCouldBeTurnedOn = false;
-    
+    FPSController script;
+    public GameObject player;
+
+
     [SerializeField] public GameObject screen;
 
     public void Update()
@@ -51,16 +54,18 @@ public class ComputerController : MonoBehaviour
         if (pcCouldBeTurnedOn)
         {
             
-            paused = togglePause();
+            
         
             OnDisplay();
+            script = player.GetComponent<FPSController>();
+            script.enabled = false;
         }
         
     }
 
     void OnDisplay()
     {
-        if (paused && !isRunning)
+        if (!isRunning)
         {
                 isRunning = !isRunning;
                 isVisible = !isVisible;
@@ -77,24 +82,13 @@ public class ComputerController : MonoBehaviour
         isVisible = !isVisible;
         Cursor.visible = isVisible;
         Cursor.lockState = isVisible ? CursorLockMode.None : CursorLockMode.Locked;
-        paused = togglePause();
+        
         ComputerControllerScript = computer.GetComponent<ComputerController>();
         ComputerControllerScript.enabled = false;
+        script.enabled = true;
     }
 
-    bool togglePause()
-    {
-        if (Time.timeScale == 0f)
-        {
-            Time.timeScale = 1f;
-            return (false);
-        }
-        else
-        {
-            Time.timeScale = 0f;
-            return (true);
-        }
-    }
+    
 
     public void swirchInternet()
     {
