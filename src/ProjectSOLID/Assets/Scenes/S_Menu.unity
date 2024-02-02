@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4533.177, g: 2941.5422, b: 2263.0115, a: 1}
+  m_IndirectSpecularColor: {r: 4602.114, g: 2945.59, b: 2178.4065, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1286,7 +1286,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Faites clic gauche pour passer \xE0 la suite"
+  m_Text: "Appuyez sur le clic gauche pour passer \xE0 la suite"
 --- !u!222 &413548640
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1365,12 +1365,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Vous vous \xEAtes inscrit pour faire partie l' unit\xE9 d'\xE9lite d'informaticiens
-    'Hope', qui est  sur le point d'embarquer pour la lune de Jupiter IO. Cette organisation
-    internationale recrute sur la base d'un nouveau test interactif vous faisant
-    prendre part \xE0 l'histoire de l'informatique. Saurez-vous d\xE9crocher votre
-    place en reproduisant les faits et gestes des grands g\xE9nies de ce domaine
-    ? \n\nBonne chance \xE0 vous, le nouveau ! \n\n"
+  m_Text: "Bien le bonjour ! Tout d'abord, merci de vous \xEAtre inscrits pour faire
+    partie l'unit\xE9 d'\xE9lite d'informaticiens \"Hope\" sur le point d'embarquer
+    pour la lune de Jupiter IO. Notre organisation internationale recrute sur la
+    base d'un nouveau test interactif vous faisant prendre part \xE0 l'histoire de
+    l'informatique. Vous devrez d\xE9crocher votre place en reproduisant les faits
+    et gestes des grands g\xE9nies de ce domaine. \n\nBonne chance \xE0 vous, le
+    nouveau !"
 --- !u!222 &425489579
 CanvasRenderer:
   m_ObjectHideFlags: 0
