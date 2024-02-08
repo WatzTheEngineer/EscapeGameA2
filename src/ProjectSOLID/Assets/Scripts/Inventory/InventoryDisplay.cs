@@ -46,7 +46,7 @@ public class InventoryDisplay : MonoBehaviour
     {
         
         inventory.SwapSlot(dragedSlotIndex, index);
-        contextMenu.Select(index, slots[index]);
+        /*contextMenu.Select(index, slots[index]);*/
         
     }
 
