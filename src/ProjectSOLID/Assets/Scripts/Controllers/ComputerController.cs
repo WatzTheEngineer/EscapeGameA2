@@ -20,6 +20,7 @@ public class ComputerController : MonoBehaviour
     public bool pcCouldBeTurnedOn = false;
     FPSController script;
     public GameObject player;
+    public bool forceOn;
 
 
     [SerializeField] public GameObject screen;
@@ -27,7 +28,7 @@ public class ComputerController : MonoBehaviour
     public void Update()
     {
         
-        if(alimentationGetElectricity() && wireIsPlugged())
+        if((alimentationGetElectricity() && wireIsPlugged()) || forceOn)
         {
             pcCouldBeTurnedOn = true;
             screen.SetActive(true);
@@ -82,7 +83,6 @@ public class ComputerController : MonoBehaviour
         isVisible = !isVisible;
         Cursor.visible = isVisible;
         Cursor.lockState = isVisible ? CursorLockMode.None : CursorLockMode.Locked;
-        
         ComputerControllerScript = computer.GetComponent<ComputerController>();
         ComputerControllerScript.enabled = false;
         script.enabled = true;
