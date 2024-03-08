@@ -61948,7 +61948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1890128562}
-  timeRemaining: 10
+  timeRemaining: 120
   explosion: {fileID: 1215156380}
 --- !u!1 &1455455007
 GameObject:

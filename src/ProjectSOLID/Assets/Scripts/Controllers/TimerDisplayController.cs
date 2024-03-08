@@ -22,7 +22,30 @@ public class TimerDisplayController : MonoBehaviour
             timeRemaining -= Time.deltaTime;
             float min = Mathf.FloorToInt(timeRemaining / 60);
             float sec = Mathf.FloorToInt(timeRemaining % 60);
-            display = min.ToString() + ":" + sec.ToString();
+            if (min < 10)
+            {
+                if (sec < 10)
+                {
+                    display = "0"+min.ToString() + ":0" + sec.ToString();
+                }
+                else
+                {
+                    display = "0" + min.ToString() + ":" + sec.ToString();
+                }
+                
+            }
+            else
+            {
+                if (sec < 10)
+                {
+                    display =min.ToString() + ":0" + sec.ToString();
+                }
+                else
+                {
+                    display = min.ToString() + ":" + sec.ToString();
+                }
+            }
+            
             timerText.text = display;
             yield return null;
 
