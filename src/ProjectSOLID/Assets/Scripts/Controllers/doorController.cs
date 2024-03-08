@@ -31,8 +31,7 @@ public class doorController : MonoBehaviour
     void OpenDoor()
     {
         float movement = 0.7f * Time.deltaTime;
-        Debug.Log(door.position.y);
-        Debug.Log(door.position.y > 0);
+
         if (door.position.y - 5.5 > 0 ) {
             door.position = new Vector3(door.position.x, door.position.y - movement, door.position.z);
         }
