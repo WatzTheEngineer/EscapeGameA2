@@ -7,6 +7,7 @@ public class TimerDisplayController : MonoBehaviour
     public TextMeshPro timerText;
     public float timeRemaining = 120f;
     private string display;
+    public GameObject explosion;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class TimerDisplayController : MonoBehaviour
 
     IEnumerator Countdown()
     {
-        while (timeRemaining > 0)
+        while (timeRemaining >= 0)
         {
             timeRemaining -= Time.deltaTime;
             float min = Mathf.FloorToInt(timeRemaining / 60);
@@ -24,8 +25,11 @@ public class TimerDisplayController : MonoBehaviour
             display = min.ToString() + ":" + sec.ToString();
             timerText.text = display;
             yield return null;
+
         }
 
         timerText.text = "BOOM";
+
+        explosion.SetActive(true);
     }
 }
