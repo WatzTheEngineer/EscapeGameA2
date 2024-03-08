@@ -13,6 +13,7 @@ namespace Utils
         private const string Tag = "InteractiveObject";
         private const string Tag2 = "InteractiveComputer";
         private const string Tag3 = "InteractiveDoor";
+        private const string Tag4 = "InterativeBombCase";
         private const string TextTag = "TextTag";
         [SerializeField] private int rayLength;
         [SerializeField] private LayerMask layerMaskInterract;
@@ -20,6 +21,7 @@ namespace Utils
         [SerializeField] private KeyCode openKey = KeyCode.E;
         [SerializeField] private GameObject crossAir;
         public GameObject _lock;
+        private GameObject _bombCase;
         private lockPickingController _lockPickingController;
         private ComputerController _raycastComputerInteraction;
         private IRaycastable _raycastedInteractive;
@@ -53,6 +55,22 @@ namespace Utils
                     crossAir.GetComponent<CanvasScaler>().scaleFactor = 2.5f;
 
                     if (Input.GetKeyDown(openKey)) _raycastComputerInteraction.WindowsLaunch();
+                }
+
+            RaycastHit hit3;
+            var fwd3 = transform.TransformDirection(Vector3.forward);
+            var mask3 = (1 << LayerMask.NameToLayer(exculdeLayerName)) | layerMaskInterract.value;
+            if (Physics.Raycast(transform.position, fwd3, out hit3, rayLength, mask3))
+                if (hit.collider.CompareTag(Tag4))
+                {
+                    _bombCase = hit.collider.gameObject;
+                    crossAir.GetComponent<CanvasScaler>().scaleFactor = 2.5f;
+
+
+                    if (Input.GetKeyDown(openKey))
+                    {
+                        _bombCase.SetActive(false);
+                    };
                 }
 
             RaycastHit hitDoor;
