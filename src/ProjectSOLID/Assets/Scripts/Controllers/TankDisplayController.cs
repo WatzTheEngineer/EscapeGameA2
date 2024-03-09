@@ -6,6 +6,7 @@ public class TankDisplayController : MonoBehaviour
     public TextMeshPro timerText;
     private float time = 0f;
     private string display;
+    private bool isAcitve = false;
 
     void Start()
     {
@@ -15,7 +16,7 @@ public class TankDisplayController : MonoBehaviour
 
     IEnumerator Countdown()
     {
-        while (time >= -5)
+        while (!isAcitve)
         {
             time += Time.deltaTime;
             
@@ -51,6 +52,11 @@ public class TankDisplayController : MonoBehaviour
             yield return null;
 
         }
+        timerText.text = "------";
 
+    }
+    public void switchMode()
+    {
+        isAcitve = true;
     }
 }

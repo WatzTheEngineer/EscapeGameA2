@@ -18,6 +18,8 @@ public class ComputerBombController : MonoBehaviour
     FPSController script;
     public GameObject player;
     public bool forceOn;
+    public GameObject greenLight;
+    public GameObject redLight;
 
 
 
@@ -63,6 +65,13 @@ public class ComputerBombController : MonoBehaviour
         ComputerControllerScript = computer.GetComponent<ComputerBombController>();
         ComputerControllerScript.enabled = false;
         script.enabled = true;
+    }
+
+    public void switchlight()
+    {
+        greenLight.SetActive(false);
+        redLight.SetActive(true);
+
     }
     
 }

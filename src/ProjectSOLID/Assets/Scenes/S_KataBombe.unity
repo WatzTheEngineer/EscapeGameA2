@@ -57258,6 +57258,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1435895917}
+        m_TargetAssemblyTypeName: ComputerBombController, TestAssembly
+        m_MethodName: switchlight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1507893976}
+        m_TargetAssemblyTypeName: TankDisplayController, TestAssembly
+        m_MethodName: switchMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &913349291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68483,7 +68507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1048595315
 Transform:
   m_ObjectHideFlags: 0
@@ -70577,7 +70601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1090448991
 Transform:
   m_ObjectHideFlags: 0
@@ -94091,6 +94115,8 @@ MonoBehaviour:
   computer: {fileID: 1435895912}
   player: {fileID: 716770669}
   forceOn: 0
+  greenLight: {fileID: 1725196901}
+  redLight: {fileID: 77056556}
   screen: {fileID: 2013522194}
 --- !u!1 &1438338813
 GameObject:
@@ -123397,7 +123423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1902910909
 Transform:
   m_ObjectHideFlags: 0
