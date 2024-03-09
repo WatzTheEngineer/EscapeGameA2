@@ -15,6 +15,7 @@ TagManager:
   - InteractiveDoor
   - TextTag
   - InterativeBombCase
+  - InteractiveBombComputer
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,8 @@ namespace Utils
         private const string Tag2 = "InteractiveComputer";
         private const string Tag3 = "InteractiveDoor";
         private const string Tag4 = "InterativeBombCase";
+        private const string Tag5 = "InteractiveBombComputer";
+        
         private const string TextTag = "TextTag";
         [SerializeField] private int rayLength;
         [SerializeField] private LayerMask layerMaskInterract;
@@ -24,6 +26,7 @@ namespace Utils
         private GameObject _bombCase;
         private lockPickingController _lockPickingController;
         private ComputerController _raycastComputerInteraction;
+        private ComputerBombController _raycastComputerBombInteraction;
         private IRaycastable _raycastedInteractive;
 
 
@@ -71,6 +74,18 @@ namespace Utils
                     {
                         _bombCase.SetActive(false);
                     };
+                }
+
+            RaycastHit hit4;
+            var fwd4 = transform.TransformDirection(Vector3.forward);
+            var mask4 = (1 << LayerMask.NameToLayer(exculdeLayerName)) | layerMaskInterract.value;
+            if (Physics.Raycast(transform.position, fwd4, out hit4, rayLength, mask4))
+                if (hit.collider.CompareTag(Tag5))
+                {
+                    _raycastComputerBombInteraction = hit.collider.gameObject.GetComponent<ComputerBombController>();
+                    crossAir.GetComponent<CanvasScaler>().scaleFactor = 2.5f;
+
+                    if (Input.GetKeyDown(openKey)) _raycastComputerBombInteraction.WindowsLaunch();
                 }
 
             RaycastHit hitDoor;
