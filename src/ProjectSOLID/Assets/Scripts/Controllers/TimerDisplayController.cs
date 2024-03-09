@@ -55,4 +55,9 @@ public class TimerDisplayController : MonoBehaviour
 
         explosion.SetActive(true);
     }
+
+    public void penality(float timepenality)
+    {
+        timeRemaining -= timepenality;
+    }
 }
