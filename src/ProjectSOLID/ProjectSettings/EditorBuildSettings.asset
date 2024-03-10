@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/S_LevelSelection.unity
     guid: 360460fed19d722459baf5b401889bdb
+  - enabled: 1
+    path: Assets/Scenes/S_KataBombe.unity
+    guid: ddb93aef33bfb9542b5175c87b321dfb
   m_configObjects: {}
