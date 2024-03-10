@@ -15,6 +15,7 @@ namespace Utils
         private const string Tag3 = "InteractiveDoor";
         private const string Tag4 = "InterativeBombCase";
         private const string Tag5 = "InteractiveBombComputer";
+        private const string Tag6 = "ElevatorButton";
         
         private const string TextTag = "TextTag";
         [SerializeField] private int rayLength;
@@ -28,6 +29,7 @@ namespace Utils
         private ComputerController _raycastComputerInteraction;
         private ComputerBombController _raycastComputerBombInteraction;
         private IRaycastable _raycastedInteractive;
+        private ElevatorController _elevatorController;
 
 
         private void Update()
@@ -86,6 +88,18 @@ namespace Utils
                     crossAir.GetComponent<CanvasScaler>().scaleFactor = 2.5f;
 
                     if (Input.GetKeyDown(openKey)) _raycastComputerBombInteraction.WindowsLaunch();
+                }
+
+            RaycastHit hit5;
+            var fwd5 = transform.TransformDirection(Vector3.forward);
+            var mask5 = (1 << LayerMask.NameToLayer(exculdeLayerName)) | layerMaskInterract.value;
+            if (Physics.Raycast(transform.position, fwd5, out hit5, rayLength, mask5))
+                if (hit.collider.CompareTag(Tag6))
+                {
+                    _elevatorController = hit.collider.gameObject.GetComponent<ElevatorController>();
+                    crossAir.GetComponent<CanvasScaler>().scaleFactor = 2.5f;
+
+                    if (Input.GetKeyDown(openKey)) _elevatorController.Up();
                 }
 
             RaycastHit hitDoor;

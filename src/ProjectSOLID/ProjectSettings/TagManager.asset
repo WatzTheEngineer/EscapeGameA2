@@ -16,6 +16,7 @@ TagManager:
   - TextTag
   - InterativeBombCase
   - InteractiveBombComputer
+  - ElevatorButton
   layers:
   - Default
   - TransparentFX
