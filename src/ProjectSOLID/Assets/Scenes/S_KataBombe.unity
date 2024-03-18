@@ -27641,7 +27641,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1435895917}
         m_TargetAssemblyTypeName: ComputerBombController, TestAssembly
-        m_MethodName: switchlight
+        m_MethodName: Switchlight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
