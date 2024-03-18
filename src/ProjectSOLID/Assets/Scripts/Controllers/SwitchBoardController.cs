@@ -44,7 +44,7 @@ namespace Controllers
 
         private bool HaveGreatCombination()
         {
-            return GetSwitchState(2) && GetSwitchState(3) == false && GetSwitchState(7) == true;
+            return (!((GetSwitchState(0) ^ (GetSwitchState(1)) && (GetSwitchState(2)) && !(GetSwitchState(3)) && ((GetSwitchState(7) || (GetSwitchState(4) && (GetSwitchState(5) && GetSwitchState(6))))))));
         }
     }
 }
