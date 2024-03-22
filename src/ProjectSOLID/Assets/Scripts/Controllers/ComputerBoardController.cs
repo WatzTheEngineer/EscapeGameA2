@@ -10,8 +10,31 @@ namespace Controllers
         private ComputerBoardController _computerControllerScript;
         private FPSController _script;
         public GameObject player;
-        public GameObject greenLight;
-        public GameObject redLight;
+        public GameObject greenLight1;
+        public GameObject redLight1;
+        public GameObject greenLight2;
+        public GameObject redLight2;
+        public GameObject greenLight3;
+        public GameObject redLight3;
+        public GameObject greenLight4;
+        public GameObject redLight4;
+        public GameObject greenLight5;
+        public GameObject redLight5;
+        public GameObject greenLight6;
+        public GameObject redLight6;
+        public GameObject greenLight7;
+        public GameObject redLight7;
+        public GameObject greenLight8;
+        public GameObject redLight8;
+        private bool switch1isOn = false;
+        private bool switch2isOn = false;
+        private bool switch3isOn = false;
+        private bool switch4isOn = false;
+        private bool switch5isOn = false;
+        private bool switch6isOn = false;
+        private bool switch7isOn = false;
+        private bool switch8isOn = false;
+        private bool switch9isOn = false;
 
         [SerializeField] public GameObject screen;
 
@@ -51,12 +74,7 @@ namespace Controllers
             _script.enabled = true;
         }
 
-        public void Switchlight()
-        {
-            greenLight.SetActive(false);
-            redLight.SetActive(true);
-
-        }
+ 
 
         private void ComputerStateChange()
         {
@@ -66,6 +84,113 @@ namespace Controllers
             Cursor.lockState = isVisible ? CursorLockMode.None : CursorLockMode.Locked;
         }
 
+        public void switchMode(int id)
+        {
+            if (id == 1)
+            {
+                if (switch1isOn)
+                {
+                    redLight1.SetActive(true);
+                    greenLight1.SetActive(false);
+                }
+                else
+                {
+                    redLight1.SetActive(false);
+                    greenLight1.SetActive(true);
+                }
+            }
+            if (id == 2)
+            {
+                if (switch1isOn)
+                {
+                    redLight2.SetActive(true);
+                    greenLight2.SetActive(false);
+                }
+                else
+                {
+                    redLight2.SetActive(false);
+                    greenLight2.SetActive(true);
+                }
+            }
+            if (id == 3)
+            {
+                if (switch1isOn)
+                {
+                    redLight3.SetActive(true);
+                    greenLight3.SetActive(false);
+                }
+                else
+                {
+                    redLight3.SetActive(false);
+                    greenLight3.SetActive(true);
+                }
+            }
+            if (id == 4)
+            {
+                if (switch1isOn)
+                {
+                    redLight4.SetActive(true);
+                    greenLight4.SetActive(false);
+                }
+                else
+                {
+                    redLight4.SetActive(false);
+                    greenLight4.SetActive(true);
+                }
+            }
+            if (id == 5)
+            {
+                if (switch1isOn)
+                {
+                    redLight5.SetActive(true);
+                    greenLight5.SetActive(false);
+                }
+                else
+                {
+                    redLight5.SetActive(false);
+                    greenLight5.SetActive(true);
+                }
+            }
+            if (id == 6)
+            {
+                if (switch1isOn)
+                {
+                    redLight6.SetActive(true);
+                    greenLight6.SetActive(false);
+                }
+                else
+                {
+                    redLight6.SetActive(false);
+                    greenLight6.SetActive(true);
+                }
+            }
+            if (id == 7)
+            {
+                if (switch1isOn)
+                {
+                    redLight7.SetActive(true);
+                    greenLight7.SetActive(false);
+                }
+                else
+                {
+                    redLight7.SetActive(false);
+                    greenLight7.SetActive(true);
+                }
+            }
+            if (id == 8)
+            {
+                if (switch1isOn)
+                {
+                    redLight8.SetActive(true);
+                    greenLight8.SetActive(false);
+                }
+                else
+                {
+                    redLight8.SetActive(false);
+                    greenLight8.SetActive(true);
+                }
+            }
+        }
     }
 }
 

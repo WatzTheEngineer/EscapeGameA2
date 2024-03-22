@@ -12,6 +12,7 @@ namespace Controllers
         public GameObject player;
         public GameObject greenLight;
         public GameObject redLight;
+        
     
         [SerializeField] public GameObject screen;
     
