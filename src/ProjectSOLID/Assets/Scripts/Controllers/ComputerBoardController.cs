@@ -26,6 +26,8 @@ namespace Controllers
         public GameObject redLight7;
         public GameObject greenLight8;
         public GameObject redLight8;
+        public GameObject greenLight9;
+        public GameObject redLight9;
         private bool switch1isOn = false;
         private bool switch2isOn = false;
         private bool switch3isOn = false;
@@ -34,13 +36,14 @@ namespace Controllers
         private bool switch6isOn = false;
         private bool switch7isOn = false;
         private bool switch8isOn = false;
-        private bool switch9isOn = false;
+        private bool isUnlock = false;
 
         [SerializeField] public GameObject screen;
 
         public void Update()
         {
             screen.SetActive(true);
+            unlockBoard();
         }
 
 
@@ -72,6 +75,16 @@ namespace Controllers
             _computerControllerScript = computer.GetComponent<ComputerBoardController>();
             _computerControllerScript.enabled = false;
             _script.enabled = true;
+        }
+
+        public void unlockBoard()
+        {
+            isUnlock = (!((switch1isOn ^ switch2isOn) && switch3isOn) && !switch4isOn) && (switch8isOn || (switch5isOn && switch6isOn && switch7isOn));
+            if (isUnlock)
+            {
+                redLight9.SetActive(false);
+                greenLight9.SetActive(true);
+            }
         }
 
  

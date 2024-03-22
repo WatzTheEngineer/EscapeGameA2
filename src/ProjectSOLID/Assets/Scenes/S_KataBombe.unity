@@ -53734,6 +53734,8 @@ MonoBehaviour:
   redLight7: {fileID: 1661096239}
   greenLight8: {fileID: 1575976886}
   redLight8: {fileID: 101556209}
+  greenLight9: {fileID: 2004082505}
+  redLight9: {fileID: 741281891}
   screen: {fileID: 1968702076}
 --- !u!1 &1448403131
 GameObject:
