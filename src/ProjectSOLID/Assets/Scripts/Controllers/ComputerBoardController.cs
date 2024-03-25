@@ -28,6 +28,8 @@ namespace Controllers
         public GameObject redLight8;
         public GameObject greenLight9;
         public GameObject redLight9;
+        public GameObject greenBombLight;
+        public GameObject redBombLight;
         private bool switch1isOn = false;
         private bool switch2isOn = false;
         private bool switch3isOn = false;
@@ -84,6 +86,8 @@ namespace Controllers
             {
                 redLight9.SetActive(false);
                 greenLight9.SetActive(true);
+                greenBombLight.SetActive(false);
+                redBombLight.SetActive(true);
             }
         }
 
@@ -101,15 +105,19 @@ namespace Controllers
         {
             if (id == 1)
             {
+
                 if (switch1isOn)
                 {
                     redLight1.SetActive(true);
                     greenLight1.SetActive(false);
+                    switch1isOn = !switch1isOn;
+
                 }
                 else
                 {
                     redLight1.SetActive(false);
                     greenLight1.SetActive(true);
+                    switch1isOn = !switch1isOn;
                 }
             }
             if (id == 2)
@@ -118,11 +126,13 @@ namespace Controllers
                 {
                     redLight2.SetActive(true);
                     greenLight2.SetActive(false);
+                    switch2isOn = !switch2isOn;
                 }
                 else
                 {
                     redLight2.SetActive(false);
                     greenLight2.SetActive(true);
+                    switch2isOn= !switch2isOn;
                 }
             }
             if (id == 3)
@@ -131,11 +141,13 @@ namespace Controllers
                 {
                     redLight3.SetActive(true);
                     greenLight3.SetActive(false);
+                    switch3isOn = !switch3isOn;
                 }
                 else
                 {
                     redLight3.SetActive(false);
                     greenLight3.SetActive(true);
+                    switch3isOn= !switch3isOn;
                 }
             }
             if (id == 4)
@@ -144,11 +156,13 @@ namespace Controllers
                 {
                     redLight4.SetActive(true);
                     greenLight4.SetActive(false);
+                    switch4isOn = !switch4isOn;
                 }
                 else
                 {
                     redLight4.SetActive(false);
                     greenLight4.SetActive(true);
+                    switch4isOn= !switch4isOn;
                 }
             }
             if (id == 5)
@@ -157,11 +171,13 @@ namespace Controllers
                 {
                     redLight5.SetActive(true);
                     greenLight5.SetActive(false);
+                    switch5isOn = !switch5isOn;
                 }
                 else
                 {
                     redLight5.SetActive(false);
                     greenLight5.SetActive(true);
+                    switch5isOn= !switch5isOn;
                 }
             }
             if (id == 6)
@@ -170,11 +186,13 @@ namespace Controllers
                 {
                     redLight6.SetActive(true);
                     greenLight6.SetActive(false);
+                    switch6isOn = !switch6isOn;
                 }
                 else
                 {
                     redLight6.SetActive(false);
                     greenLight6.SetActive(true);
+                    switch6isOn= !switch6isOn;
                 }
             }
             if (id == 7)
@@ -183,11 +201,13 @@ namespace Controllers
                 {
                     redLight7.SetActive(true);
                     greenLight7.SetActive(false);
+                    switch7isOn = !switch7isOn;
                 }
                 else
                 {
                     redLight7.SetActive(false);
                     greenLight7.SetActive(true);
+                    switch7isOn= !switch7isOn;
                 }
             }
             if (id == 8)
@@ -196,11 +216,13 @@ namespace Controllers
                 {
                     redLight8.SetActive(true);
                     greenLight8.SetActive(false);
+                    switch8isOn = !switch8isOn;
                 }
                 else
                 {
                     redLight8.SetActive(false);
                     greenLight8.SetActive(true);
+                    switch8isOn= !switch8isOn;
                 }
             }
         }
