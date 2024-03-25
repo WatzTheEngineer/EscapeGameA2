@@ -8,6 +8,11 @@ public class TimerDisplayController : MonoBehaviour
     public float timeRemaining = 120f;
     private string display;
     public GameObject explosion;
+    public GameObject yellowWire;
+    public GameObject blueWire;
+    public GameObject redWire;
+    public GameObject armedScreen;
+    private bool armed = true;
 
     void Start()
     {
@@ -19,41 +24,57 @@ public class TimerDisplayController : MonoBehaviour
     {
         while (timeRemaining >= 0)
         {
-            timeRemaining -= Time.deltaTime;
-            float min = Mathf.FloorToInt(timeRemaining / 60);
-            float sec = Mathf.FloorToInt(timeRemaining % 60);
-            if (min < 10)
+            if (!(yellowWire.gameObject.activeSelf || blueWire.gameObject.activeSelf || redWire.activeSelf))
             {
-                if (sec < 10)
-                {
-                    display = "0"+min.ToString() + ":0" + sec.ToString();
-                }
-                else
-                {
-                    display = "0" + min.ToString() + ":" + sec.ToString();
-                }
+                armed = false;
+                armedScreen.SetActive(false);
                 
+                timerText.text = "xx:xx";
+                break;
             }
             else
             {
-                if (sec < 10)
+                timeRemaining -= Time.deltaTime;
+                float min = Mathf.FloorToInt(timeRemaining / 60);
+                float sec = Mathf.FloorToInt(timeRemaining % 60);
+                if (min < 10)
                 {
-                    display =min.ToString() + ":0" + sec.ToString();
+                    if (sec < 10)
+                    {
+                        display = "0" + min.ToString() + ":0" + sec.ToString();
+                    }
+                    else
+                    {
+                        display = "0" + min.ToString() + ":" + sec.ToString();
+                    }
+
                 }
                 else
                 {
-                    display = min.ToString() + ":" + sec.ToString();
+                    if (sec < 10)
+                    {
+                        display = min.ToString() + ":0" + sec.ToString();
+                    }
+                    else
+                    {
+                        display = min.ToString() + ":" + sec.ToString();
+                    }
                 }
-            }
-            
-            timerText.text = display;
-            yield return null;
 
+                timerText.text = display;
+                yield return null;
+
+            }
         }
 
-        timerText.text = "BOOM";
+        if (armed)
+        {
+            timerText.text = "BOOM";
 
-        explosion.SetActive(true);
+            explosion.SetActive(true);
+
+        }
+        
     }
 
     public void penality(float timepenality)

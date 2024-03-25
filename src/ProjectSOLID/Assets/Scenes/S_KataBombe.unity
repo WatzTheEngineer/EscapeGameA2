@@ -49713,7 +49713,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1048595315
 Transform:
   m_ObjectHideFlags: 0
@@ -50946,7 +50946,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1090448991
 Transform:
   m_ObjectHideFlags: 0
@@ -67933,6 +67933,10 @@ MonoBehaviour:
   timerText: {fileID: 1890128562}
   timeRemaining: 900
   explosion: {fileID: 1215156380}
+  yellowWire: {fileID: 1725196901}
+  blueWire: {fileID: 2118349224}
+  redWire: {fileID: 223215006}
+  armedScreen: {fileID: 2143843194}
 --- !u!1 &1449895915
 GameObject:
   m_ObjectHideFlags: 0
@@ -89231,7 +89235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1902910909
 Transform:
   m_ObjectHideFlags: 0
