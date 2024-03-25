@@ -12,7 +12,9 @@ public class TimerDisplayController : MonoBehaviour
     public GameObject blueWire;
     public GameObject redWire;
     public GameObject armedScreen;
+    public GameObject door;
     private bool armed = true;
+
 
     void Start()
     {
@@ -22,13 +24,17 @@ public class TimerDisplayController : MonoBehaviour
 
     IEnumerator Countdown()
     {
+        doorController doorScript = door.GetComponent<doorController>();
         while (timeRemaining >= 0)
         {
             if (!(yellowWire.gameObject.activeSelf || blueWire.gameObject.activeSelf || redWire.activeSelf))
             {
+                door.gameObject.SetActive(true);
                 armed = false;
                 armedScreen.SetActive(false);
-                
+                doorScript.CloseDoor();
+
+
                 timerText.text = "xx:xx";
                 break;
             }

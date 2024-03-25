@@ -67937,6 +67937,7 @@ MonoBehaviour:
   blueWire: {fileID: 2118349224}
   redWire: {fileID: 223215006}
   armedScreen: {fileID: 2143843194}
+  door: {fileID: 1158163462}
 --- !u!1 &1449895915
 GameObject:
   m_ObjectHideFlags: 0

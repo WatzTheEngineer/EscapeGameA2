@@ -6,6 +6,7 @@ public class doorController : MonoBehaviour
     public bool opening = false;
     public Transform door;
     public GameObject trigger;
+ 
 
 
     void Update()
@@ -15,7 +16,7 @@ public class doorController : MonoBehaviour
   
             OpenDoor();
         }
-        
+     
         
 
         
@@ -29,7 +30,7 @@ public class doorController : MonoBehaviour
         if (obj.transform.name == "DoorCloseTrigger"){opening = false;}
     }
 
-    void OpenDoor()
+    public void OpenDoor()
     {
         float movement = 0.7f * Time.deltaTime;
 
@@ -40,10 +41,15 @@ public class doorController : MonoBehaviour
         {
             trigger.gameObject.SetActive(false);
         }
-    
-            
+   
+
+    }
+    public void CloseDoor()
+    {
+        door.gameObject.SetActive(false);
         
         
+
 
     }
 }
