@@ -18,6 +18,7 @@ TagManager:
   - InteractiveBombComputer
   - ElevatorButton
   - InteractiveBoardComputer
+  - InteractiveServerComputer
   layers:
   - Default
   - TransparentFX
