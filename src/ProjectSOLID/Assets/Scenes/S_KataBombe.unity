@@ -11637,7 +11637,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1446938361}
         m_TargetAssemblyTypeName: Controllers.ComputerBoardController, TestAssembly
@@ -29409,8 +29409,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -786.5316, y: 346.02313}
-  m_SizeDelta: {x: 310.6023, y: 44.774}
+  m_AnchoredPosition: {x: -680.65137, y: 346.02313}
+  m_SizeDelta: {x: 522.3629, y: 44.774}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &792374253
 MonoBehaviour:
