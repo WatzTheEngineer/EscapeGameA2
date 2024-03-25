@@ -122,7 +122,7 @@ namespace Controllers
             }
             if (id == 2)
             {
-                if (switch1isOn)
+                if (switch2isOn)
                 {
                     redLight2.SetActive(true);
                     greenLight2.SetActive(false);
@@ -137,7 +137,7 @@ namespace Controllers
             }
             if (id == 3)
             {
-                if (switch1isOn)
+                if (switch3isOn)
                 {
                     redLight3.SetActive(true);
                     greenLight3.SetActive(false);
@@ -152,7 +152,7 @@ namespace Controllers
             }
             if (id == 4)
             {
-                if (switch1isOn)
+                if (switch4isOn)
                 {
                     redLight4.SetActive(true);
                     greenLight4.SetActive(false);
@@ -167,7 +167,7 @@ namespace Controllers
             }
             if (id == 5)
             {
-                if (switch1isOn)
+                if (switch5isOn)
                 {
                     redLight5.SetActive(true);
                     greenLight5.SetActive(false);
@@ -182,7 +182,7 @@ namespace Controllers
             }
             if (id == 6)
             {
-                if (switch1isOn)
+                if (switch6isOn)
                 {
                     redLight6.SetActive(true);
                     greenLight6.SetActive(false);
@@ -197,7 +197,7 @@ namespace Controllers
             }
             if (id == 7)
             {
-                if (switch1isOn)
+                if (switch7isOn)
                 {
                     redLight7.SetActive(true);
                     greenLight7.SetActive(false);
@@ -212,7 +212,7 @@ namespace Controllers
             }
             if (id == 8)
             {
-                if (switch1isOn)
+                if (switch8isOn)
                 {
                     redLight8.SetActive(true);
                     greenLight8.SetActive(false);

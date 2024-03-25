@@ -33,7 +33,7 @@ namespace Utils
         private IRaycastable _raycastedInteractive;
         private ElevatorController _elevatorController;
         private ComputerBoardController _boardController;
-
+        public GameObject other;
 
         private void Update()
         {
